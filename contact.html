@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGT</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css"> <!-- ربط ملف الأنماط المخصص -->
+    <script src="script.js"></script>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<body>
+    <!-- Navbar -->
+    <section>
+        <!-- ناف بار مع التنسيق المطلوب -->
+        <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <!-- شعار الشركة في الجهة اليمنى -->
+                <a class="navbar-brand" href="#">
+                    <img src="img/1.PNG" alt="شعار الشركة" class="logo">
+                </a>
+
+                <!-- القائمة للكمبيوتر -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link fw-bold" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="about.html">من نحن</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="services.html">الخدمات</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="Products.html">المنتجات</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- زر القائمة للهاتف -->
+                <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mainNavbar">
+                    <i class="fa-solid fa-bars fs-2"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- القائمة الجانبية للهاتف -->
+        <!-- Offcanvas Navbar -->
+        <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mainNavbar">
+            <!-- زر الإغلاق -->
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!-- القائمة -->
+            <div class="offcanvas-body text-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- الأيقونات الاجتماعية -->
+            <div class="offcanvas-footer text-center mt-auto pb-3">
+                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-facebook-f fs-4"></i></a>
+                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-linkedin-in fs-4"></i></a>
+                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-instagram fs-4"></i></a>
+            </div>
+        </div>
+
+        <!-- تحسينات الـ CSS -->
+
+
+    </section>
+
+
+
+
+    <!-- قسم الاتصال -->
+    <!-- قسم الاتصال -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <!--  القسم النصي -->
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info p-4 rounded-3 shadow-lg bg-light text-end">
+                        <h3 class="text-dark-blue">العنوان</h3>
+                        <p>اليمن - صنعاء - الحصبة</p>
+                    
+                        <h3 class="text-dark-blue">البريد الإلكتروني</h3>
+                        <p><a href="mailto:sales@aait.sa" class="d-block">info@ragtco.com</a></p>
+                    
+                        <h3 class="text-dark-blue">رقم الجوال</h3>
+                        <p>+9671680088</p>
+                    
+                        <h3 class="text-dark-blue">رقم الواتساب</h3>
+                        <p><a href="https://wa.me/966555105662" class="d-block">+9671680088</a></p>
+                    </div>
+                    
+
+                    <!-- 🗺️ قسم عنوان الشركة والخريطة تحت العنوان -->
+                    <div class="company-location p-4 rounded-3 shadow-lg bg-light text-center mt-3">
+                        <h3 class="text-dark-blue"><i class="bi bi-map text-primary me-2"></i> موقع الشركة على الخريطة
+                        </h3>
+                        <p>اليمن - صنعاء - الحصبة</p>
+                    </div>
+
+                    <div class="map-container shadow-lg rounded-3 overflow-hidden mt-3">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3846.9906281258295!2d44.20639768515023!3d15.376993889311821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDIyJzM3LjIiTiA0NMKwMTInMTUuMiJF!5e0!3m2!1sar!2s!4v1738173118930!5m2!1sar!2s"
+                            width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+
+                <!--  نموذج التواصل -->
+                <div class="contact col-lg-8">
+                    <form id="contact-form" class="contact-form bg-white p-4 shadow-lg rounded-3 needs-validation"
+                        action="send_email.php" method="post" novalidate>
+                        <h3 class="text-dark-blue mb-4">تواصل معنا</h3>
+                        <p class="text-muted">دعنا نكون شركاء نجاحك. إذا كان لديك استفسارات أو تحتاج إلى مزيد من
+                            المعلومات، اكتب لنا الآن وسنقوم بالرد في أقرب وقت ممكن!</p>
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">الاسم</label>
+                            <input type="text" class="form-control" id="name" name="name"
+                                placeholder="يرجى كتابة الاسم هنا" required>
+                            <div class="invalid-feedback">يرجى إدخال الاسم.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="يرجى كتابة البريد الإلكتروني هنا" required>
+                            <div class="invalid-feedback">يرجى إدخال بريد إلكتروني صالح.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">رقم الهاتف</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                placeholder="يرجى كتابة رقم الهاتف هنا" required>
+                            <div class="invalid-feedback">يرجى إدخال رقم هاتف صحيح.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="service" class="form-label">اختر الخدمة</label>
+                            <select id="service" name="service" class="form-select" required>
+                                <option value="" disabled selected>اختر الخدمة</option>
+                                <option>استشارة</option>
+                                <option>دعم فني</option>
+                                <option>معلومات إضافية</option>
+                            </select>
+                            <div class="invalid-feedback">يرجى اختيار خدمة.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">رسالتك</label>
+                            <textarea class="form-control" id="message" name="message" rows="4"
+                                placeholder="يرجى كتابة رسالتك هنا" required></textarea>
+                            <div class="invalid-feedback">يرجى كتابة رسالتك.</div>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-primary btn-lg w-100">إرسال</button>
+                        <div id="alert-box" class="alert text-center mt-3" style="display: none;"></div>
+                        <p id="success-message" class="text-success mt-3" style="display: none;">تم إرسال رسالتك بنجاح!
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const alertBox = document.getElementById("alert-box");
+    const submitButton = document.getElementById("submit-btn");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // منع تحديث الصفحة
+
+        const formData = new FormData(form);
+
+        // تعطيل الزر أثناء الإرسال
+        submitButton.innerHTML = "جاري الإرسال...";
+        submitButton.disabled = true;
+
+        // إخفاء التنبيه السابق
+        alertBox.style.display = "none";
+
+        fetch("send_email.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            submitButton.innerHTML = "إرسال";
+            submitButton.disabled = false;
+
+            if (data.status === "success") {
+                alertBox.className = "alert alert-success text-center mt-3";
+                alertBox.innerHTML = "✅ تم إرسال رسالتك بنجاح!";
+                form.reset(); // تفريغ النموذج بعد الإرسال الناجح
+            } else {
+                alertBox.className = "alert alert-danger text-center mt-3";
+                alertBox.innerHTML = "❌ " + data.message;
+            }
+
+            alertBox.style.display = "block";
+
+            // إخفاء الرسالة بعد 5 ثوانٍ
+            setTimeout(() => {
+                alertBox.style.display = "none";
+            }, 5000);
+        })
+        .catch(error => {
+            submitButton.innerHTML = "إرسال";
+            submitButton.disabled = false;
+
+            alertBox.className = "alert alert-danger text-center mt-3";
+            alertBox.innerHTML = " حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى.";
+            alertBox.style.display = "block";
+
+            setTimeout(() => {
+                alertBox.style.display = "none";
+            }, 5000);
+        });
+    });
+});
+
+    </script>
+
+
+
+
+
+<div class="footer pt-5 pb-5 text-white-50 text-center text-md-end">
+    <div class="container">
+        <!-- إعلان العروض -->
+        <div class="breaking-news text-center p-2 mb-4">
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="info mb-5">
+              <img src="img/1.PNG" alt="الشعار" class="logo-image mb-4 rounded-circle shadow-lg" />
+              <p class="mb-4">نحن نلتزم بتقديم أعلى مستويات الجودة في كل ما نقوم به، مما يضمن تعزيز نجاح عملائنا.</p>
+              <div class="copyright">
+                <p>تصميم بواسطة <span class="text-warning">المهندس: عبدالمعين رزق</span></p>
+                <p>&copy; 2025 - <span class="text-warning">.RAGT Inc</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <div class="links">
+              <h5 class="text-light mb-4 text-center">روابط</h5>
+              <ul class="lh-lg text-center">
+                <li><a href="index.html" class="text-decoration-none text-white-50 hover-link">الرئيسية</a></li>
+                <li><a href="about.html" class="text-decoration-none text-white-50 hover-link">من نحن</a></li>
+                <li><a href="services.html" class="text-decoration-none text-white-50 hover-link">خدماتنا</a></li>
+                <li><a href="products.html" class="text-decoration-none text-white-50 hover-link">منتجاتنا</a></li>
+                <li><a href="contact.html" class="text-decoration-none text-white-50 hover-link">تواصل معنا</a></li>
+              </ul>
+            </div>
+            <!--قسم البوتن الخاص بالفوتر -->
+          </div>
+          <div class="col-md-6 col-lg-4 text-center">
+            <div class="contact">
+              <h5 class="text-light mb-4">تواصل معنا</h5>
+              <p class="lh-lg mb-4">ابقَ على تواصل معنا عبر البريد الإلكتروني أو الهاتف. نحن بانتظار رسائلكم!</p>
+              <a class="btn btn-warning text-dark fw-bold w-100 rounded-pill" href="mailto:ragt@gmail.com">info@ragtco.com</a>
+              <ul class="d-flex mt-4 list-unstyled gap-3 justify-content-center">
+                <li>
+                  <a class="text-light hover-link" href="#"><i class="fa-brands fa-facebook fa-lg rounded-circle p-2" style="background-color: #3b5998;"></i></a>
+                </li>
+                <li>
+                  <a class="text-light hover-link" href="#">
+                    <i class="fa-brands fa-instagram fa-lg rounded-circle p-2" style="background-color: #E4405F;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-light hover-link" href="https://www.linkedin.com/company/ragtco/posts/?feedView=all"><i class="fa-brands fa-linkedin fa-lg rounded-circle p-2" style="background-color: #0077b5;"></i></a>
+                </li>
+                <li>
+                  <a class="text-light hover-link" href="#"><i class="fa-brands fa-youtube fa-lg rounded-circle p-2" style="background-color: #ff0000;"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const footer = document.querySelector(".footer");
+            if (!footer) return; // التحقق من وجود الفوتر لتجنب الأخطاء
+            const socialIcons = document.querySelectorAll(".footer .social-icons a");
+
+            // ✅ إظهار الفوتر عند التمرير بسلاسة
+            function revealFooter() {
+                let footerPosition = footer.getBoundingClientRect().top;
+                let screenHeight = window.innerHeight;
+
+                if (footerPosition < screenHeight - 100) {
+                    footer.classList.add("visible");
+                }
+            }
+
+            window.addEventListener("scroll", revealFooter);
+            revealFooter();
+
+            // ✅ إضافة تأثير اهتزاز على أيقونات التواصل الاجتماعي
+            socialIcons.forEach(icon => {
+                icon.addEventListener("mouseenter", () => icon.classList.add("shake"));
+                icon.addEventListener("animationend", () => icon.classList.remove("shake"));
+            });
+        });
+
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in");
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add("fade-in-visible");
+                }, index * 200);
+            });
+
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+
+
+
+    <Script>
+        fetch('https://api.example.com/data', {
+            headers: {
+                'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+    </Script>
+    <!--نهاية السكشن-->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>

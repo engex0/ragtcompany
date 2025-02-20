@@ -1,0 +1,697 @@
+/* ألوان الهوية */
+/*  Root Variables: Defining Main Colors */
+:root {
+    --gold: #D4AF37;
+    --dark-blue: #002B5C;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --charcoal-gray: #333333;
+    --ack: #cad7df33;
+    /* Soft blue-gray */
+    --blow: #a1cfec33;
+    /* Light sky blue */
+}
+:root {
+    --goldex: #e0d7a5;
+    /* الذهبي الفاخر */
+    --dark-blueex: #253d54;
+    /* الأزرق الداكن */
+    --light-blueex: #004080;
+    /* الأزرق الفاتح */
+    --background-gradient: linear-gradient(135deg, var(--dark-blueex) 20%, var(--light-blueex) 50%, var(--goldex) 100%);
+    --text-color: #ffffff;
+    /* اللون الأساسي للنص */
+}
+
+/* 🖋️ General Styling */
+body {
+    font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    direction: rtl; /* إذا كنت تستخدم الموقع بالعربية */
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: var(--light-gray);
+    color: var(--gold);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+/*  Custom Navbar Styling */
+.navbar-custom {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px);
+    /* Frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+    /* Light golden border */
+    min-height: 90px;
+    padding: 10px 20px;
+}
+
+/*  Navbar Hover Effect */
+.navbar-custom:hover {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.2), rgba(255, 255, 255, 0.9));
+}
+
+/* Navbar Logo Styling */
+.navbar-custom .navbar-brand {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/*  Navbar Logo Image */
+.navbar-custom .navbar-brand img {
+    width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+    left: 20px;
+    display: block;
+}
+
+/*  Navbar Logo Hover Effect */
+.navbar-custom .navbar-brand img:hover {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+/*  Navbar Links */
+.navbar-custom .nav-link {
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.7rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+/*  Navbar Links Hover Effect */
+.navbar-custom .nav-link:hover {
+    color: var(--gold);
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.navbar-custom .nav-link.active {
+    color: var(--gold);
+}
+
+/*  Navbar Toggler (Hamburger Menu) */
+.navbar-custom .navbar-toggler {
+    border: none;
+    color: var(--gold);
+    font-size: 1.5rem;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-custom .navbar-toggler:hover {
+    transform: rotate(90deg);
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* 🔍 Search Bar Styling */
+.navbar-custom .search {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--gold);
+    border-radius: 30px;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.navbar-custom .search input::placeholder {
+    color: var(--charcoal-gray);
+    font-style: italic;
+}
+
+.navbar-custom .search button {
+    background-color: var(--gold);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-custom .search button:hover {
+    background-color: #FFD700;
+}
+
+/*  Sidebar (Offcanvas) Styling */
+.offcanvas {
+    height: 100vh !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+/* 🔗 Sidebar Links */
+.offcanvas-body .nav-link {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.offcanvas-body .nav-link:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+    border-radius: 8px;
+}
+
+/*  Sidebar Close Button */
+.offcanvas-header .btn-close {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    transition: transform 0.3s ease;
+}
+
+.offcanvas-header .btn-close:hover {
+    transform: rotate(180deg);
+}
+
+/*  Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar-custom .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-custom .search {
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+
+    .offcanvas-body {
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-custom {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-custom .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .navbar-custom .search button {
+        padding: 0.4rem;
+    }
+
+    .offcanvas-body .nav-link {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+}
+
+/*  Page Load Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*  Desktop-Only Adjustments */
+@media (min-width: 992px) {
+    .navbar-custom {
+        background: linear-gradient(180deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.8));
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+    }
+
+    .navbar-custom .navbar-nav {
+        margin-left: auto;
+    }
+
+    .navbar-custom .nav-link {
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+}
+
+
+
+
+
+/*end navbar*/
+
+body {
+    font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif;
+    background: var(--background-gradient);
+    background-attachment: fixed;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.custom-card {
+    background: rgba(255, 255, 255, 0.1);
+    /* تأثير زجاجي شفاف */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* تأثير عند تمرير الماوس على الكارد */
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 🌟 تحسين النصوص */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+/*  تحسين الأزرار لتكون بمستوى المتاجر العالمية */
+.btn-custom {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5);
+}
+
+/*  تحسين أزرار الطلب */
+.btn-primary {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+    border-color: #e6c200;
+    color: #fff;
+}
+
+/*  تأثير Parallax للخلفية */
+.parallax {
+    background: url('img/background.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/*  تحسين مظهر شهادات العملاء */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+/*  تحسين الخط */
+.text-highlight {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.custom-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+.custom-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.list-group-item {
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-custom {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.badge-sale {
+    background: red;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.btn-custom:hover {
+    background-color: #128C7E !important;
+    /* لون واتساب الرسمي */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* تطبيق تأثير النبض */
+.btn-custom {
+    animation: pulse 1.5s infinite;
+}
+
+/* عند التحويم، يكون التأثير أقوى وأسرع */
+.btn-custom:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+    transition: all 0.3s ease-in-out;
+}
+/*نهاية قسم المتجات */
+.btn-back {
+    border-radius: 8px; /* زوايا ناعمة */
+    font-weight: bold; /* جعل النص أكثر وضوحًا */
+    transition: all 0.3s ease-in-out; /* تأثير سلس */
+}
+
+.btn-back:hover {
+    background-color: #333; /* لون أغمق عند التمرير */
+    transform: translateX(-5px); /* تحريك الزر قليلاً لليسار */
+    color: #fff;
+}
+
+.btn-back i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-back:hover i {
+    transform: translateX(5px); /* تحريك الأيقونة باتجاه النص عند التمرير */
+}
+@media (max-width: 768px) {
+    /* إصلاح التأثيرات الضبابية */
+    .custom-card {
+        backdrop-filter: none;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        transform: none;
+    }
+
+    /* إصلاح الخلفيات الثابتة */
+    body {
+        background-attachment: scroll;
+    }
+
+    /* إصلاح حجم الخطوط */
+    body {
+        font-size: 16px;
+    }
+    h1, h2, h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    /* إصلاح الصور */
+    img {
+        filter: none;
+    }
+}
+/*نهاية قسم المتجات */
+
+
+/* ======================== Footer Section ======================== */
+.footer {
+    background-color: #002B5C;
+    /* Dark background */
+    color: #fff;
+    /* Light text color */
+    padding: 50px 20px;
+    text-align: center;
+    direction: rtl;
+    /* Support for right-to-left layout */
+}
+
+/* ======================== Company Logo Styling ======================== */
+.footer img {
+    width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: block;
+
+    /* Adjust left spacing */
+    margin-left: -20px;
+    /* Moves the image slightly to the left */
+}
+
+/* Hover Effect */
+.footer img:hover {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer img {
+        width: 100px;
+        /* Slightly smaller on tablets */
+        margin-left: -15px;
+        /* Adjust left spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer img {
+        width: 90px;
+        /* Smaller on mobile */
+        margin-left: -10px;
+        /* Adjust left spacing */
+    }
+}
+
+
+.footer .info img:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    /* Stronger shadow */
+}
+
+/* Push the logo to the left on larger screens */
+@media (min-width: 992px) {
+    .footer .info img {
+        margin-left: -1000px;
+        /* Adjusted positioning */
+    }
+}
+
+/* ======================== Footer Headings ======================== */
+.footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #FFD700;
+    /* Golden color */
+    text-align: center;
+    /* Centered headings */
+}
+
+/* ======================== Footer Text & Links ======================== */
+.footer p,
+.footer a {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer p:hover,
+.footer a:hover {
+    color: #FFD700;
+    /* Golden color on hover */
+}
+
+/* ======================== Social Media Icons ======================== */
+.footer .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    /* Center icons by default */
+    flex-wrap: wrap;
+    /* Ensure icons don’t overflow */
+    gap: 15px;
+}
+
+/* Adjust positioning for smaller screens */
+@media (max-width: 768px) {
+    .footer .social-icons {
+        justify-content: flex-end;
+        /* Shift icons slightly to the right */
+        padding-right: 400px;
+        gap: 10px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.3rem;
+        /* Slightly smaller icons */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer .social-icons {
+        justify-content: flex-end;
+        padding-right: 15px;
+        /* More refined positioning */
+        gap: 8px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+}
+
+/* ======================== Footer Layout & Columns ======================== */
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures responsiveness */
+    gap: 30px;
+    justify-content: center;
+    /* Align items centrally */
+    align-items: flex-start;
+}
+
+.footer .col {
+    flex: 1 1 300px;
+    /* Responsive column sizing */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ======================== Responsive Adjustments ======================== */
+@media (max-width: 768px) {
+    .footer .info img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer h5 {
+        font-size: 1.3rem;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer h5 {
+        font-size: 1.2rem;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 0.8rem;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+.breaking-news {
+    font-size: 1.2rem; /* تكبير الخط */
+    font-weight: 800; /* جعله أكثر سمكًا */
+    color: #f4f4f4; /* لون أحمر لافت */
+    text-transform: uppercase; /* جعل الأحرف كبيرة */
+    border: 2px solid #fff8f9; /* لون إطار متناسق مع النص */
+    border-radius: 30px; /* زوايا دائرية */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل أقوى */
+    padding: 1rem 2rem; /* توسيع التباعد الداخلي */
+    background: #fff5f5; /* خلفية فاتحة لإبراز النص */
+    text-align: center; /* توسيط النص */
+}
+/* ======================== End of Footer Section ======================== */

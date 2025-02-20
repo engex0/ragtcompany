@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGT</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/pro3style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pro3style.css"> <!-- ملف CSS الخارجي -->
+
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <section>
+        <!-- ناف بار مع التنسيق المطلوب -->
+        <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <!-- شعار الشركة في الجهة اليمنى -->
+                <a class="navbar-brand" href="#">
+                    <img src="img/1.PNG" alt="شعار الشركة" class="logo">
+                </a>
+
+                <!-- القائمة للكمبيوتر -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- زر القائمة للهاتف -->
+                <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mainNavbar">
+                    <i class="fa-solid fa-bars fs-2"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- القائمة الجانبية للهاتف -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainNavbar">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body text-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="offcanvas-footer text-center mt-auto pb-3">
+                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-facebook-f fs-4"></i></a>
+                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-linkedin-in fs-4"></i></a>
+                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-instagram fs-4"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <!-- ✅ زر الرجوع للقائمة السابقة -->
+                <div class="text-end mb-3">
+                    <a href="Products.html" class="btn btn-dark btn-back d-inline-flex align-items-center fs-6 px-4 py-2 shadow-sm transition">
+                        <i class="fas fa-arrow-right ms-2"></i> الرجوع للقائمة
+                    </a>
+                </div>
+                <div class="custom-card bg-white p-4 shadow rounded position-relative">
+                    <h2 class="section-title text-center mb-4 text-GOLD fw-bold">بيسان</h2>
+    
+                    <div class="row g-4 align-items-center">
+                        <!-- ✅ صورة المنتج -->
+                        <div class="col-md-6 text-center">
+                            <img src="img/besan.JPG" alt="منتجاتنا الغذائية" class="custom-img shadow-sm img-fluid"
+                                loading="lazy">
+                        </div>
+    
+                        <!-- ✅ تفاصيل المنتج -->
+                        <div class="col-md-6">
+                            <p class="text-muted fw-bold fs-5">
+                                اكتشف منتج <strong>بيسان</strong> الفريد الذي يجمع بين <span class=>الجودة
+                                    العالية والتصميم العصري</span>
+                                مثالي للاستخدام اليومي ويمنحك تجربة لا مثيل لها!
+                            </p>
+
+                            <p class="text-muted fw-bold fs-5">
+                                مصنوع من أفضل المواد لضمان أفضل تجربة، ويتميز بمواصفات تجعله الخيار الأمثل لك أثناء
+                                الاستمتاع بوقتك
+                            </p>
+    
+                            <!-- ✅ لماذا تختار منتجاتنا؟ -->
+                            <h5 class="mt-4 fw-bold text-gold"> لماذا تختار بيسان؟</h5>
+                            <ul class="list-group list-group-flush fw-bold fs-5">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> جودة ممتازة
+                                    ومتانة عالية</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> تصميم أنيق
+                                    وعصري</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> مناسب لجميع
+                                    الفئات والاستخدامات</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> سعر منافس
+                                    مع قيمة رائعة</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> خدمة توصيل
+                                </li>
+                            </ul>
+    
+                            <!-- ✅ زر الشراء / التواصل -->
+                            <div class="text-center mt-4">
+                                <a href="https://wa.me/+967780200000"
+                                    class="btn btn-success btn-custom shadow-lg px-4 py-3 d-inline-flex align-items-center justify-content-center gap-3"
+                                    style="font-size: 1.2rem; font-weight: bold; border-radius: 50px; min-width: 250px; transition: all 0.3s ease-in-out;"
+                                    target="_blank">
+                                    <i class="fab fa-whatsapp fs-4"></i> تواصل واطلب الآن
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <!-- ✅ قسم آراء العملاء -->
+                <div class="mt-5">
+                    <h3 class="text-muted text-center fw-bold mb-4"> آراء عملائنا</h3>
+    
+                    <div id="customerReviews" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner text-center">
+    
+                            <!-- رأي العميل 1 -->
+                            <div class="carousel-item active">
+                                <img src="img/abdulmuain.jpg" class="rounded-circle mb-3" alt="عميل سعيد" width="80" height="80">
+                                <p class="text-white fw-bold fs-5">"النكهات لذيذة جدًا، تجربة رائعة!"</p>
+                                <strong class="text-white fw-bold fs-6">- أحمد القحطاني</strong>
+                            </div>
+    
+                            <!-- رأي العميل 2 -->
+                            <div class="carousel-item">
+                                <img src="img/abdulmuain.jpg" class="rounded-circle mb-3" alt="عميل سعيد" width="80" height="80">
+                                <p class="text-white fw-bold fs-6">"جودة مذهلة وسعر ممتاز، شكراً لكم!"</p>
+                                <strong class="text-white fw-bold fs-5">- م.عبدالمعين رزق</strong>
+                            </div>
+    
+                            <!-- رأي العميل 3 -->
+                            <div class="carousel-item">
+                                <img src="img/abdulmuain.jpg" class="rounded-circle mb-3" alt="عميل سعيد" width="80" height="80">
+                                <p class="text-white fw-bold fs-5">"توصيل سريع ونكهة لا تقاوم!"</p>
+                                <strong class="text-white fw-bold fs-6">- م.عبدالمعين رزق</strong>
+                            </div>
+    
+                        </div>
+    
+                        <!-- أزرار التنقل -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#customerReviews"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#customerReviews"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                        
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!-- ✅ قسم العنوان والزر -->
+
+
+<!-- ✅ نافذة الاختبار المنبثقة -->
+<!-- ✅ زر عائم لفتح الاختبار -->
+<button class="ask-btn" onclick="showQuizModal()">
+    <span>عادي أسألك؟</span> 
+    <i class="fas fa-paper-plane"></i>
+</button>
+
+<!-- ✅ نافذة الاختبار المنبثقة -->
+<div class="modal fade" id="quizModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">تحب تعرف مشروبك المفضل مع بيسان؟ 🥤</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted fw-bold">جاوب بسرعة وخلينا نعرف أي نكهة من بيسان تناسبك! </p>
+
+                <form id="quizForm">
+                    <div class="mb-3">
+                        <label class="form-label text-dark fw-bold"> لما تطلب مشروب، إيش أول شي يجي في بالك؟</label>
+                        <select class="form-select" id="q1">
+                            <option value="">اختر...</option>
+                            <option value="كولا">طعم كلاسيكي منعش، لازم يكون فيه غازات! 🥤</option>
+                            <option value="برتقال">شيء  منعش ويعطيني طاقة بعد يوم متعب 🥤</option>
+                            <option value="ليمون">نكهة باردة ومنعشة تهدّي الجو! 🥤</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-dark fw-bold"> كيف توصف شعورك في يوم عادي مثل أي يوم ؟</label>
+                        <select class="form-select" id="q2">
+                            <option value="">اختر...</option>
+                            <option value="كولا">أنا مليء بالطاقة وأحب الأجواء السريعة! 🥤</option>
+                            <option value="برتقال">أنا اجتماعي ومرح وأحب الحيوية! 🥤</option>
+                            <option value="ليمون">أنا شخص مسترخي وأحب الهدوء! 🥤</option>
+                        </select>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="button" class="btn btn-primary w-100" onclick="getDrinkResult()"> اكتشف الآن! 🚀</button>
+                    </div>
+                </form>
+
+                <div id="result" class="mt-4 text-center fw-bold"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ✅ تحسين تحريك الزر -->
+<style>
+   /* زر "عادي أسألك؟" بتصميم عصري */
+.ask-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* التدرج الذهبي */
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 18px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    animation: bounce 1.5s infinite;
+}
+
+.ask-btn i {
+    font-size: 20px;
+}
+
+/* تأثير القفز للزر */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* تحسين نافذة الاختبار */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-close {
+    font-size: 16px;
+}
+
+</style>
+
+<!-- ✅ كود جافاسكربت -->
+<script>
+    // ✅ عرض النافذة المنبثقة
+function showQuizModal() {
+    var quizModal = new bootstrap.Modal(document.getElementById('quizModal'));
+    quizModal.show();
+}
+
+// ✅ تحديد المشروب بناءً على إجابات المستخدم
+function getDrinkResult() {
+    let q1 = document.getElementById("q1").value;
+    let q2 = document.getElementById("q2").value;
+    let result = document.getElementById("result");
+
+    if (!q1 || !q2) {
+        result.innerHTML = `<p class="text-danger">😅 رجاءً اختر جميع الإجابات أولًا!</p>`;
+        return;
+    }
+
+    let drink = (q1 === q2) ? q1 : "كولا"; // اختيار مشروب بناءً على إجابات متناسقة
+
+    let drinkMessages = {
+        "كولا": "🎉 مشروبك المثالي هو كولا بيسان! طاقة وانتعاش لا مثيل له! 🥤",
+        "برتقال": "🍊 مشروبك المثالي هو برتقال بيسان! نكهة فاكهية مليئة بالحيوية! ⚡",
+        "ليمون": "❄️ مشروبك المثالي هو ليمون بيسان! انتعاش بارد ينعش يومك! 🌿"
+    };
+
+    result.innerHTML = `<p class="alert alert-success">${drinkMessages[drink]}</p>`;
+}
+
+</script>
+
+    
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="footer pt-5 pb-5 text-white-50 text-center text-md-end"
+        style="background: linear-gradient(180deg, #002B5C, #001D3D); direction: rtl;">
+        <div class="container">
+            <!-- إعلان العروض -->
+            <div class="breaking-news text-center p-2 mb-4"
+                style="background-color: #D4AF37; color: #002B5C; font-weight: bold;">
+            </div>
+
+            <div class="row">
+                <!-- معلومات الشركة -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="info mb-5">
+                        <img src="img/1.PNG" alt="الشعار" class="logo-image mb-4 rounded-circle shadow-lg" />
+                        <p class="mb-4">نحن نلتزم بتقديم أعلى مستويات الجودة في كل ما نقوم به، مما يضمن تعزيز نجاح
+                            عملائنا.</p>
+
+                        </p>
+                        <div class="copyright">
+                            <p>تصميم بواسطة <span class="text-warning">المهندس: عبدالمعين رزق</span></p>
+                            <p>&copy; 2025 - <span class="text-warning">RAGT Inc</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الروابط -->
+                <div class="col-md-6 col-lg-2">
+                    <div class="links">
+                        <h5 class="text-light mb-4 text-center">روابط</h5>
+                        <ul class=" lh-lg text-center">
+                            <li><a href="index.html" class="text-decoration-none text-white-50 hover-link">الرئيسية</a>
+                            </li>
+                            <li><a href="about.html" class="text-decoration-none text-white-50 hover-link">من نحن</a>
+                            </li>
+                            <li><a href="services.html"
+                                    class="text-decoration-none text-white-50 hover-link">خدماتنا</a></li>
+                            <li><a href="products.html"
+                                    class="text-decoration-none text-white-50 hover-link">منتجاتنا</a></li>
+                            <li><a href="contact.html" class="text-decoration-none text-white-50 hover-link">تواصل
+                                    معنا</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- التواصل -->
+                <div class="col-md-6 col-lg-4 text-center">
+                    <div class="contact">
+                        <h5 class="text-light mb-4">تواصل معنا</h5>
+                        <p class="lh-lg mb-4">ابقَ على تواصل معنا عبر البريد الإلكتروني أو الهاتف. نحن بانتظار رسائلكم!
+                        </p>
+                        <a class="btn btn-warning text-dark fw-bold w-100 rounded-pill"
+                            href="mailto:ragt@gmail.com">info@ragtco.com</a>
+                        <ul class="d-flex mt-4 list-unstyled gap-3 justify-content-center">
+                            <li>
+                                <a class="text-light hover-link" href="#"><i
+                                        class="fa-brands fa-facebook fa-lg rounded-circle p-2"
+                                        style="background-color: #3b5998;"></i></a>
+                            </li>
+                            <li>
+                                <a class="text-light hover-link" href="#">
+                                    <i class="fa-brands fa-instagram fa-lg rounded-circle p-2"
+                                        style="background-color: #E4405F;"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-light hover-link"
+                                    href="https://www.linkedin.com/company/ragtco/posts/?feedView=all"><i
+                                        class="fa-brands fa-linkedin fa-lg rounded-circle p-2"
+                                        style="background-color: #0077b5;"></i></a>
+                            </li>
+                            <li>
+                                <a class="text-light hover-link" href="#"><i
+                                        class="fa-brands fa-youtube fa-lg rounded-circle p-2"
+                                        style="background-color: #ff0000;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const footer = document.querySelector(".footer");
+            if (!footer) return; // التحقق من وجود الفوتر لتجنب الأخطاء
+            const socialIcons = document.querySelectorAll(".footer .social-icons a");
+
+            //  إظهار الفوتر عند التمرير بسلاسة
+            function revealFooter() {
+                let footerPosition = footer.getBoundingClientRect().top;
+                let screenHeight = window.innerHeight;
+
+                if (footerPosition < screenHeight - 100) {
+                    footer.classList.add("visible");
+                }
+            }
+
+            window.addEventListener("scroll", revealFooter);
+            revealFooter();
+
+            //  إضافة تأثير اهتزاز على أيقونات التواصل الاجتماعي
+            socialIcons.forEach(icon => {
+                icon.addEventListener("mouseenter", () => icon.classList.add("shake"));
+                icon.addEventListener("animationend", () => icon.classList.remove("shake"));
+            });
+        });
+
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in");
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add("fade-in-visible");
+                }, index * 200);
+            });
+
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+
+
+
+
+    <!--نهاية السكشن-->
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

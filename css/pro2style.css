@@ -1,0 +1,803 @@
+/* ألوان الهوية */
+/*  Root Variables: Defining Main Colors */
+/* ======================== */
+/* Root Variables (Colors) */
+/* ======================== */
+:root {
+    --gold: #D4AF37; /* اللون الذهبي */
+    --dark-blue: rgb(8, 59, 95); /* اللون الأزرق الداكن */
+    --dark-blueone:#01538d;
+    --white: #FFFFFF; /* اللون الأبيض */
+    --light-gray: #F5F5F5; /* اللون الرمادي الفاتح */
+    --charcoal-gray: #333333; /* اللون الرمادي الداكن */
+    --ack: #cad7df33; /* لون أزرق رمادي ناعم */
+    --blow: #a1cfec33; /* لون أزرق سماوي فاتح */
+    --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* التدرج الذهبي */
+
+}
+
+/* ======================== */
+/* General Styling */
+/* ======================== */
+body {
+    font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    direction: rtl; /* تخطيط من اليمين لليسار للعربية */
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+}
+
+/* ======================== */
+/* Typography */
+/* ======================== */
+h1, h2, h3 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    color: var(--white); /* تغيير لون العناوين إلى الأزرق الداكن */
+}
+
+p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    color: var(--white); /* تغيير لون الفقرات إلى الأزرق الداكن */
+}
+
+/* ======================== */
+/* Button Styling */
+/* ======================== */
+.btn-primary {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    color: var(--dark-blueone); /* تغيير لون النص إلى الأزرق الداكن */
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* ======================== */
+/* Navbar Styling */
+/* ======================== */
+.navbar-custom {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px); /* تأثير الزجاج المعتم */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* ظل ناعم */
+    border-bottom: 1px solid rgba(255, 215, 0, 0.5); /* حدود ذهبية خفيفة */
+    min-height: 90px;
+    padding: 10px 20px;
+}
+
+.navbar-custom:hover {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.2), rgba(255, 255, 255, 0.9));
+}
+
+/* Navbar Logo */
+.navbar-custom .navbar-brand {
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .navbar-brand img {
+    width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 20px;
+    display: block;
+}
+
+.navbar-custom .navbar-brand img:hover {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+/* Navbar Links */
+.navbar-custom .nav-link {
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.7rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--gold); /* تغيير لون النص إلى الذهبي عند التحويم */
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.navbar-custom .nav-link.active {
+    color: var(--gold); /* تغيير لون النص إلى الذهبي للرابط النشط */
+}
+
+/* Navbar Toggler (Hamburger Menu) */
+.navbar-custom .navbar-toggler {
+    border: none;
+    color: var(--gold); /* تغيير لون النص إلى الذهبي */
+    font-size: 1.5rem;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-custom .navbar-toggler:hover {
+    transform: rotate(90deg);
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Search Bar */
+.navbar-custom .search {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--gold); /* تغيير لون الحدود إلى الذهبي */
+    border-radius: 30px;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+}
+
+.navbar-custom .search input::placeholder {
+    color: var(--charcoal-gray); /* تغيير لون النص البديل إلى الرمادي الداكن */
+    font-style: italic;
+}
+
+.navbar-custom .search button {
+    background-color: var(--gold); /* تغيير لون الخلفية إلى الذهبي */
+    color: var(--white); /* تغيير لون النص إلى الأبيض */
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-custom .search button:hover {
+    background-color: #D4AF37; /* تغيير لون الخلفية إلى الذهبي الداكن عند التحويم */
+}
+
+/* ======================== */
+/* Offcanvas (Mobile Menu) */
+/* ======================== */
+.offcanvas {
+    height: 100vh !important;
+    background: linear-gradient(
+        135deg,
+        rgba(248, 251, 255, 0.9), /* الأزرق الداكن مع شفافية */
+        rgba(230, 214, 129, 0.9)   /* الذهبي الفاتح مع شفافية */
+    );
+    backdrop-filter: blur(10px); /* تأثير ضبابي */
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1); /* ظل ناعم */
+    width: 300px; /* عرض ثابت للقائمة الجانبية */
+    transition: transform 0.3s ease-in-out; /* تأثير انزلاق سلس */
+}
+
+/* Offcanvas Header */
+.offcanvas-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* حدود خفيفة */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offcanvas-header .btn-close {
+    font-size: 1.5rem; /* حجم أكبر لزر الإغلاق */
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    transition: transform 0.3s ease; /* تأثير دوران سلس */
+}
+
+.offcanvas-header .btn-close:hover {
+    transform: rotate(90deg); /* تدوير زر الإغلاق عند التحويم */
+}
+
+/* Offcanvas Body */
+.offcanvas-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.offcanvas-body .navbar-nav {
+    margin-top: 1rem;
+}
+
+.offcanvas-body .nav-link {
+    font-size: 1.1rem; /* حجم خط أكبر قليلاً */
+    font-weight: 500; /* وزن متوسط للخط */
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    padding: 0.75rem 1rem; /* تباعد مريح */
+    border-radius: 8px; /* زوايا دائرية */
+    transition: all 0.3s ease; /* تأثير تحويم سلس */
+    text-align: right; /* محاذاة النص إلى اليمين للتخطيط من اليمين لليسار */
+}
+
+.offcanvas-body .nav-link:hover {
+    background-color: rgba(255, 215, 0, 0.1); /* خلفية ذهبية خفيفة عند التحويم */
+    color: var(--gold); /* تغيير لون النص إلى الذهبي */
+}
+
+/* Offcanvas Footer (Social Icons) */
+.offcanvas-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* حدود خفيفة */
+    text-align: center;
+}
+
+.offcanvas-footer .social-icon {
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    font-size: 1.5rem; /* حجم أكبر للأيقونات */
+    margin: 0 0.5rem; /* تباعد بين الأيقونات */
+    transition: all 0.3s ease; /* تأثير تحويم سلس */
+}
+
+.offcanvas-footer .social-icon:hover {
+    color: var(--gold); /* تغيير لون النص إلى الذهبي عند التحويم */
+    transform: translateY(-3px); /* تأثير رفع خفيف */
+}
+
+/* ======================== */
+/* Responsive Adjustments */
+/* ======================== */
+@media (max-width: 767.98px) {
+    .offcanvas {
+        width: 250px; /* عرض أصغر قليلاً للشاشات الصغيرة */
+    }
+
+    .offcanvas-body .nav-link {
+        font-size: 1rem; /* حجم خط أصغر للشاشات الصغيرة */
+    }
+
+    .offcanvas-footer .social-icon {
+        font-size: 1.2rem; /* حجم أيقونات أصغر للشاشات الصغيرة */
+    }
+}
+
+/* ======================== */
+/* Responsive Styles */
+/* ======================== */
+@media (max-width: 991.98px) {
+    .navbar-custom .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-custom .search {
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+
+    .offcanvas-body {
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-custom {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-custom .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .navbar-custom .search button {
+        padding: 0.4rem;
+    }
+
+    .offcanvas-body .nav-link {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+}
+
+/* ======================== */
+/* Animations */
+/* ======================== */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ======================== */
+/* Desktop-Only Adjustments */
+/* ======================== */
+@media (min-width: 992px) {
+    .navbar-custom {
+        background: linear-gradient(180deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.8));
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+    }
+
+    .navbar-custom .navbar-nav {
+        margin-left: auto;
+    }
+
+    .navbar-custom .nav-link {
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+}
+
+/*end navbar*/
+:root {
+    --goldex: #e0d7a5;
+    /* الذهبي الفاخر */
+    --dark-blueex: #253d54;
+    /* الأزرق الداكن */
+    --light-blueex: #004080;
+    /* الأزرق الفاتح */
+    --background-gradient: linear-gradient(135deg, var(--dark-blueex) 20%, var(--light-blueex) 50%, var(--goldex) 100%);
+    --text-color: #ffffff;
+    /* اللون الأساسي للنص */
+}
+body {
+    font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif;
+    background: var(--background-gradient);
+    background-attachment: fixed;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.custom-card {
+    background: rgba(255, 255, 255, 0.1);
+    /* تأثير زجاجي شفاف */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* تأثير عند تمرير الماوس على الكارد */
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 🌟 تحسين النصوص */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+/*  تحسين الأزرار لتكون بمستوى المتاجر العالمية */
+.btn-custom {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5);
+}
+
+/*  تحسين أزرار الطلب */
+.btn-primary {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+    border-color: #e6c200;
+    color: #fff;
+}
+
+/*  تأثير Parallax للخلفية */
+.parallax {
+    background: url('img/background.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/*  تحسين مظهر شهادات العملاء */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+/*  تحسين الخط */
+.text-highlight {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.custom-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+.custom-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.list-group-item {
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-custom {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.badge-sale {
+    background: red;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.btn-custom:hover {
+    background-color: #128C7E !important;
+    /* لون واتساب الرسمي */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-custom:hover {
+    background-color: #128C7E !important;
+    /* لون واتساب الرسمي */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+}
+
+/* تطبيق تأثير النبض */
+.btn-custom {
+    animation: pulse 1.5s infinite;
+}
+
+/* عند التحويم، يكون التأثير أقوى وأسرع */
+.btn-custom:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+    transition: all 0.3s ease-in-out;
+}
+/* تطبيق تأثير النبض */
+.btn-custom {
+    animation: pulse 1.5s infinite;
+}
+
+/* عند التحويم، يكون التأثير أقوى وأسرع */
+.btn-custom:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+    transition: all 0.3s ease-in-out;
+}
+/*نهاية قسم المتجات */
+.btn-back {
+    border-radius: 8px; /* زوايا ناعمة */
+    font-weight: bold; /* جعل النص أكثر وضوحًا */
+    transition: all 0.3s ease-in-out; /* تأثير سلس */
+}
+
+.btn-back:hover {
+    background-color: #333; /* لون أغمق عند التمرير */
+    transform: translateX(-5px); /* تحريك الزر قليلاً لليسار */
+    color: #fff;
+}
+
+.btn-back i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-back:hover i {
+    transform: translateX(5px); /* تحريك الأيقونة باتجاه النص عند التمرير */
+}
+@media (max-width: 768px) {
+    /* إصلاح التأثيرات الضبابية */
+    .custom-card {
+        backdrop-filter: none;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        transform: none;
+    }
+
+    /* إصلاح الخلفيات الثابتة */
+    body {
+        background-attachment: scroll;
+    }
+
+    /* إصلاح حجم الخطوط */
+    body {
+        font-size: 16px;
+    }
+    h1, h2, h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    /* إصلاح الصور */
+    img {
+        filter: none;
+    }
+}
+/*نهاية قسم المتجات */
+
+
+    /* ======================== Footer Section ======================== */
+    .footer {
+        background-color:  rgb(5, 61, 97);
+        color: #fff;
+        padding: 50px 20px;
+        text-align: center;
+        direction: rtl;
+    }
+    
+    .footer img {
+        width: 120px;
+        max-height: 60px;
+        object-fit: contain;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        display: block;
+        margin-left: -20px;
+    }
+    
+    .footer img:hover {
+        transform: scale(1.1) rotate(5deg);
+        transition: transform 0.3s ease;
+    }
+    
+    @media (max-width: 768px) {
+        .footer img {
+            width: 100px;
+            margin-left: -15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .footer img {
+            width: 90px;
+            margin-left: -10px;
+        }
+    }
+    
+    .footer .info img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    }
+    
+    @media (min-width: 992px) {
+        .footer .info img {
+            margin-left: -1000px;
+        }
+    }
+    
+    .footer h5 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #D4AF37; /* اللون الذهبي */
+        text-align: center;
+    }
+    
+    .footer p,
+    .footer a {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #ccc;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .footer p:hover,
+    .footer a:hover {
+        color: #D4AF37; /* اللون الذهبي */
+    }
+    
+    .footer .social-icons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-right: 0;
+    }
+    
+    @media (max-width: 768px) {
+        .footer .social-icons {
+            gap: 10px;
+        }
+    
+        .footer .social-icons a {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .footer .social-icons {
+            gap: 8px;
+        }
+    
+        .footer .social-icons a {
+            font-size: 1.1rem;
+            padding: 6px;
+        }
+    }
+    
+    .footer .social-icons a {
+        color: #fff;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer .social-icons a:hover {
+        color: #D4AF37; /* اللون الذهبي */
+        transform: scale(1.1);
+        background-color: rgba(212, 175, 55, 0.2); /* خلفية ذهبية شفافة */
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.7); /* ظل ذهبي */
+    }
+    
+    .footer .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .footer .col {
+        flex: 1 1 300px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+        .footer .info img {
+            width: 100px;
+            height: 100px;
+        }
+    
+        .footer h5 {
+            font-size: 1.3rem;
+        }
+    
+        .footer p,
+        .footer a {
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .footer {
+            padding: 30px 15px;
+        }
+    
+        .footer h5 {
+            font-size: 1.2rem;
+        }
+    
+        .footer p,
+        .footer a {
+            font-size: 0.8rem;
+        }
+    
+        .footer .social-icons a {
+            font-size: 1.1rem;
+        }
+    }
+    
+    /* ======================== Breaking News Section ======================== */
+    .breaking-news {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #141414; /* اللون الذهبي */
+        border: 2px solid #D4AF37; /* اللون الذهبي */
+        border-radius: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        padding: 1rem 2rem;
+        background: #002B5C; /* اللون الأزرق الداكن */
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B); font-weight: bold;
+    }
+    .custom-gradient {
+        background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);
+        color: #002B5C; 
+        font-weight: bold;
+        padding: 20px; 
+        border-radius: 10px; /* إضافة زوايا مستديرة */
+        text-align: center; /* توسيط النص */
+    }
+    
+
+    .contact .btn {
+        background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);
+        color: #002B5C; 
+        font-weight: bold;
+        text-align: center; /* توسيط النص */
+        
+    }
+    .contact .btn :hover {
+        color: #D4AF37; /* اللون الذهبي */
+        transform: scale(1.1);
+        background-color: rgba(212, 175, 55, 0.2); /* خلفية ذهبية شفافة */
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.7); /* ظل ذهبي */
+    }

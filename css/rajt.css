@@ -1,0 +1,1304 @@
+/* ======================== */
+/* Root Variables (Colors) */
+/* ======================== */
+:root {
+    --gold: #D4AF37; /* اللون الذهبي */
+    --dark-blue: rgb(1,83,141); /* اللون الأزرق الداكن */
+    --dark-blueone:#01538d;
+    --white: #FFFFFF; /* اللون الأبيض */
+    --light-gray: #F5F5F5; /* اللون الرمادي الفاتح */
+    --charcoal-gray: #333333; /* اللون الرمادي الداكن */
+    --ack: #cad7df33; /* لون أزرق رمادي ناعم */
+    --blow: #a1cfec33; /* لون أزرق سماوي فاتح */
+    --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* التدرج الذهبي */
+
+}
+
+/* ======================== */
+/* General Styling */
+/* ======================== */
+body {
+    font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    direction: rtl; /* تخطيط من اليمين لليسار للعربية */
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+}
+
+/* ======================== */
+/* Typography */
+/* ======================== */
+h1, h2, h3 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    color: var(--white); /* تغيير لون العناوين إلى الأزرق الداكن */
+}
+
+p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    color: var(--white); /* تغيير لون الفقرات إلى الأزرق الداكن */
+}
+
+/* ======================== */
+/* Button Styling */
+/* ======================== */
+.btn-primary {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    color: var(--dark-blueone); /* تغيير لون النص إلى الأزرق الداكن */
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* ======================== */
+/* Navbar Styling */
+/* ======================== */
+.navbar-custom {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px); /* تأثير الزجاج المعتم */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* ظل ناعم */
+    border-bottom: 1px solid rgba(255, 215, 0, 0.5); /* حدود ذهبية خفيفة */
+    min-height: 90px;
+    padding: 10px 20px;
+}
+
+.navbar-custom:hover {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.2), rgba(255, 255, 255, 0.9));
+}
+
+/* Navbar Logo */
+.navbar-custom .navbar-brand {
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .navbar-brand img {
+    width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 20px;
+    display: block;
+}
+
+.navbar-custom .navbar-brand img:hover {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+/* Navbar Links */
+.navbar-custom .nav-link {
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.7rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--gold); /* تغيير لون النص إلى الذهبي عند التحويم */
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.navbar-custom .nav-link.active {
+    color: var(--gold); /* تغيير لون النص إلى الذهبي للرابط النشط */
+}
+
+/* Navbar Toggler (Hamburger Menu) */
+.navbar-custom .navbar-toggler {
+    border: none;
+    color: var(--gold); /* تغيير لون النص إلى الذهبي */
+    font-size: 1.5rem;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-custom .navbar-toggler:hover {
+    transform: rotate(90deg);
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Search Bar */
+.navbar-custom .search {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--gold); /* تغيير لون الحدود إلى الذهبي */
+    border-radius: 30px;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+}
+
+.navbar-custom .search input::placeholder {
+    color: var(--charcoal-gray); /* تغيير لون النص البديل إلى الرمادي الداكن */
+    font-style: italic;
+}
+
+.navbar-custom .search button {
+    background-color: var(--gold); /* تغيير لون الخلفية إلى الذهبي */
+    color: var(--white); /* تغيير لون النص إلى الأبيض */
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-custom .search button:hover {
+    background-color: #D4AF37; /* تغيير لون الخلفية إلى الذهبي الداكن عند التحويم */
+}
+
+/* ======================== */
+/* Offcanvas (Mobile Menu) */
+/* ======================== */
+.offcanvas {
+    height: 100vh !important;
+    background: linear-gradient(
+        135deg,
+        rgba(248, 251, 255, 0.9), /* الأزرق الداكن مع شفافية */
+        rgba(230, 214, 129, 0.9)   /* الذهبي الفاتح مع شفافية */
+    );
+    backdrop-filter: blur(10px); /* تأثير ضبابي */
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1); /* ظل ناعم */
+    width: 300px; /* عرض ثابت للقائمة الجانبية */
+    transition: transform 0.3s ease-in-out; /* تأثير انزلاق سلس */
+}
+
+/* Offcanvas Header */
+.offcanvas-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* حدود خفيفة */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offcanvas-header .btn-close {
+    font-size: 1.5rem; /* حجم أكبر لزر الإغلاق */
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    transition: transform 0.3s ease; /* تأثير دوران سلس */
+}
+
+.offcanvas-header .btn-close:hover {
+    transform: rotate(90deg); /* تدوير زر الإغلاق عند التحويم */
+}
+
+/* Offcanvas Body */
+.offcanvas-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.offcanvas-body .navbar-nav {
+    margin-top: 1rem;
+}
+
+.offcanvas-body .nav-link {
+    font-size: 1.1rem; /* حجم خط أكبر قليلاً */
+    font-weight: 500; /* وزن متوسط للخط */
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    padding: 0.75rem 1rem; /* تباعد مريح */
+    border-radius: 8px; /* زوايا دائرية */
+    transition: all 0.3s ease; /* تأثير تحويم سلس */
+    text-align: right; /* محاذاة النص إلى اليمين للتخطيط من اليمين لليسار */
+}
+
+.offcanvas-body .nav-link:hover {
+    background-color: rgba(255, 215, 0, 0.1); /* خلفية ذهبية خفيفة عند التحويم */
+    color: var(--gold); /* تغيير لون النص إلى الذهبي */
+}
+
+/* Offcanvas Footer (Social Icons) */
+.offcanvas-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* حدود خفيفة */
+    text-align: center;
+}
+
+.offcanvas-footer .social-icon {
+    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    font-size: 1.5rem; /* حجم أكبر للأيقونات */
+    margin: 0 0.5rem; /* تباعد بين الأيقونات */
+    transition: all 0.3s ease; /* تأثير تحويم سلس */
+}
+
+.offcanvas-footer .social-icon:hover {
+    color: var(--gold); /* تغيير لون النص إلى الذهبي عند التحويم */
+    transform: translateY(-3px); /* تأثير رفع خفيف */
+}
+
+/* ======================== */
+/* Responsive Adjustments */
+/* ======================== */
+@media (max-width: 767.98px) {
+    .offcanvas {
+        width: 250px; /* عرض أصغر قليلاً للشاشات الصغيرة */
+    }
+
+    .offcanvas-body .nav-link {
+        font-size: 1rem; /* حجم خط أصغر للشاشات الصغيرة */
+    }
+
+    .offcanvas-footer .social-icon {
+        font-size: 1.2rem; /* حجم أيقونات أصغر للشاشات الصغيرة */
+    }
+}
+
+/* ======================== */
+/* Responsive Styles */
+/* ======================== */
+@media (max-width: 991.98px) {
+    .navbar-custom .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-custom .search {
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+
+    .offcanvas-body {
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-custom {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-custom .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .navbar-custom .search button {
+        padding: 0.4rem;
+    }
+
+    .offcanvas-body .nav-link {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+}
+
+/* ======================== */
+/* Animations */
+/* ======================== */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ======================== */
+/* Desktop-Only Adjustments */
+/* ======================== */
+@media (min-width: 992px) {
+    .navbar-custom {
+        background: linear-gradient(180deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.8));
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+    }
+
+    .navbar-custom .navbar-nav {
+        margin-left: auto;
+    }
+
+    .navbar-custom .nav-link {
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+}
+
+/* ======================== */
+/* End Navbar */
+/* ======================== */
+
+/* ======================== */
+/* Start Landing Section */
+/* ======================== */
+.landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* طبقة داكنة لتحسين رؤية النص */
+    z-index: 1;
+}
+
+.landing {
+    position: relative;
+    height: 100vh; /* جعل القسم يملأ ارتفاع الشاشة بالكامل */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 0 15px;
+}
+
+.landing h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem); /* حجم خط متجاوب */
+    font-weight: 700;
+    color: #fdfdfd;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.landing p {
+    font-size: clamp(1rem, 2.5vw, 1.4rem); /* حجم خط متجاوب */
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #e8e8e8;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.landing .d-flex {
+    margin-top: 30px;
+}
+
+.landing .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 30px;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* حجم خط متجاوب */
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.btn-yellow {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+}
+
+.btn-yellow:hover {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+}
+
+.btn-dark-blue {
+    background-color: #002B5C;
+}
+
+.btn-dark-blue:hover {
+    background-color: #001a3c; /* لون أغمق عند التحويم */
+}
+
+#carouselExampleInterval {
+    height: 100vh; /* جعل الكاروسيل يملأ ارتفاع الشاشة بالكامل */
+    min-height: 500px; /* ارتفاع أدنى للشاشات الصغيرة */
+}
+
+.carousel-item {
+    height: 100vh; /* التأكد من أن كل شريحة تملأ ارتفاع الكاروسيل */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* التأكد من أن الصورة تغطي المساحة بالكامل دون تشويه */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    right: 5%; /* تحريك العنصر إلى اليمين */
+    left: auto; /* إزالة التأثير السابق لتمركزه في المنتصف */
+    transform: translateY(-50%); /* الحفاظ على محاذاة رأسية مناسبة */
+    text-align: right; /* محاذاة النص لليمين */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    padding: 1.5vw;
+    border-radius: 10px;
+    max-width: 60%; /* تقليل العرض ليبقى على اليمين */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-item.active .carousel-caption {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+
+.carousel-caption h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+
+.carousel-caption p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 600;
+}
+
+.carousel-caption .btn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* حجم خط متجاوب */
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.carousel-caption .btn-more:hover {
+    background: #fff;
+    color: #000;
+}
+
+.position-absolute.w-100.d-flex.justify-content-center {
+    bottom: 10%;
+    z-index: 10;
+}
+
+@media (max-width: 1024px) {
+    .landing h1 {
+        font-size: 3rem;
+    }
+
+    .landing p {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption {
+        max-width: 90%;
+        padding: 2vw;
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption .btn-more {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing p {
+        font-size: 1rem;
+    }
+
+    .carousel-caption {
+        max-width: 95%;
+        padding: 3vw;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-caption .btn-more {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing h1 {
+        font-size: 2rem;
+    }
+
+    .landing p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption {
+        max-width: 95%;
+        padding: 3vw;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption .btn-more {
+        font-size: 0.8rem;
+    }
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 45px; /* حجم الزر ثابت لكن مناسب */
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s, transform 0.2s;
+    
+    position: absolute;
+    top: 50%; /* توسيط الأزرار عموديًا */
+    transform: translateY(-50%);
+}
+
+/* ضبط مواقع الأزرار بناءً على اتجاهها */
+.carousel-control-prev {
+    left: 15px; /* تحريك زر السابق قليلًا للداخل */
+}
+
+.carousel-control-next {
+    right: 15px; /* تحريك زر التالي قليلًا للداخل */
+}
+
+
+
+/* تغيير لون أيقونة السهم */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(80%);
+    opacity: 0.9;
+}
+
+/* ⚡️ جعل الأزرار أكثر تناسبًا مع الأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px; /* تصغير الأزرار للجوال */
+        height: 35px;
+    }
+    
+    .carousel-control-prev {
+        left: 5px; /* تقليل المسافة من الحافة */
+    }
+    
+    .carousel-control-next {
+        right: 5px;
+    }
+}
+
+
+
+/* ======================== */
+/* End Hero Section */
+/* ======================== */
+
+/* ======================== */
+/* About Us Section */
+/* ======================== */
+.aboutus {
+    background: #ffffff;
+    padding: 4rem 1rem; /* استخدام وحدات rem للاستجابة */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.image-container {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.high-quality {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    will-change: transform, filter;
+}
+
+.high-quality:hover {
+    transform: scale(1.05);
+    filter: none;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.badge.bg-gold {
+    background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);
+    color: var(--dark-blue);
+    font-weight: bold;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 0.875rem;
+    text-align: center;
+    border: none;
+    transition: 0.3s;
+}
+
+.badge.bg-gold:hover {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.aboutus h2 {
+    font-size: 2rem; /* 32px */
+    color: var(--dark-blue);
+    margin-bottom: 1.25rem; /* 20px */
+    text-align: center;
+}
+
+.aboutus p {
+    font-size: 1.1rem; /* 17.6px */
+    color: var(--dark-blue);
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px; /* تحديد عرض النص لتحسين القراءة */
+    margin: 0 auto;
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    color: var(--dark-blue);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.75rem 1.5rem; /* استخدام وحدات rem */
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 1rem; /* 16px */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem; /* 16px */
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .aboutus {
+        padding: 3rem 2rem; /* تعديل الـ padding للشاشات المتوسطة */
+    }
+
+    .btn-gold {
+        margin-left: 0; /* إزالة الـ margin-left */
+    }
+}
+
+@media (min-width: 1025px) {
+    .aboutus {
+        padding: 4rem 2rem; /* زيادة الـ padding للشاشات الكبيرة */
+    }
+
+    .btn-gold {
+        margin-left: 235px; /* إعادة الـ margin-left للشاشات الكبيرة */
+    }
+}
+/* ======================== */
+/* End About Us Section */
+/* ======================== */
+
+/* ======================== */
+/* Our Work Section */
+/* ======================== */
+/* ملف styles.css */
+
+.card-container {
+    perspective: 1000px;
+    cursor: pointer;
+
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    border-radius: 15px;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* التدرج الذهبي */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back {
+    background:  rgb(44,128,175);
+    color: #333;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card-container:hover .card-front, .card-container:hover .card-back {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-front h5, .card-back p {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+/* تحسين الأداء على الأجهزة المحمولة */
+@media (max-width: 768px) {
+    .card {
+        height: 200px;
+    }
+
+    .card-front h5, .card-back p {
+        font-size: 1rem;
+    }
+
+    .card-front i {
+        font-size: 2rem;
+    }
+}
+.text-blue {
+    color:#01538d;/* Dark Blue */
+}
+.main-title .gold-line {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    margin: 5px auto 0;
+}
+/* ======================== */
+/* End Our Work Section */
+/* ======================== */
+
+/* ======================== */
+/* Clients Section */
+/* ======================== */
+.clients-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+    direction: ltr;
+    background: var(--white);
+    border-top: 5px solid #e6e3e3;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.clients-section h2 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.clients-slider {
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.slider-track {
+    display: inline-flex;
+    gap: 30px;
+    animation: infiniteScroll 50s linear infinite;
+}
+
+[dir="rtl"] .clients-slider {
+    direction: rtl;
+}
+
+[dir="rtl"] .slider-track {
+    animation: infiniteScrollRtl 50s linear infinite;
+}
+
+@keyframes infiniteScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes infiniteScrollRtl {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+.client-logo {
+    flex-shrink: 0;
+    width: 180px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.client-logo img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .client-logo {
+        width: 140px;
+        height: 100px;
+    }
+
+    .clients-section h2 {
+        font-size: 2rem;
+    }
+
+    .slider-track {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-logo {
+        width: 120px;
+        height: 80px;
+    }
+
+    .clients-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ======================== */
+/* End Clients Section */
+/* ======================== */
+
+/* ======================== */
+/* Subscription Section */
+/* ======================== */
+.subscription-section {
+    background: var(--white);
+    border-top: 5px solid #e6e3e3;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.subscription-section h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.subscription-section p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.subscription-section .form-control {
+    font-size: 1rem;
+    border: 2px solid #D4AF37;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 1.5rem;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.subscription-section .form-control:focus {
+    border-color: #D4AF37;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+    outline: none;
+}
+
+.subscription-section .btn-primary {
+    background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);    width: auto;
+    border-radius: 30px;
+    font-weight: bold;
+    max-width: 200px;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-section .btn-primary:hover {
+    background-color: #004080;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#feedback-message {
+    font-size: 1rem;
+    color: #28a745;
+    animation: fadeIn 1s ease forwards;
+    margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {}
+    .subscription-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .subscription-section p {
+        font-size: 1rem;
+    }
+
+    .subscription-section .form-control {
+        font-size: 0.9rem;
+        max-width: 100%;
+        /* Full width input on smaller screens */
+        padding: 0.7rem 1rem;
+    }
+
+
+
+    .subscription-section .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        background-color: #D4AF37; /* اللون الذهبي */
+        color: #002B5C; /* اللون الأزرق الداكن للنص */
+        border: none;
+    }
+    
+    .subscription-section .btn-primary:hover {
+        background-color: #c0a332; /* لون ذهبي أغمق قليلاً */
+    }
+    
+    @media (max-width: 480px) {
+        .subscription-section h2 {
+            font-size: 1.6rem;
+        }
+    
+        .subscription-section p {
+            font-size: 1.5rem;
+        }
+    
+        .subscription-section .btn-primary {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+    
+    /* ======================== Footer Section ======================== */
+    .footer {
+        background-color:  #053d62;
+        color: #fff;
+        padding: 50px 20px;
+        text-align: center;
+        direction: rtl;
+    }
+    
+    .footer img {
+        width: 120px;
+        max-height: 60px;
+        object-fit: contain;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        display: block;
+        margin-left: -20px;
+    }
+    
+    .footer img:hover {
+        transform: scale(1.1) rotate(5deg);
+        transition: transform 0.3s ease;
+    }
+    
+    @media (max-width: 768px) {
+        .footer img {
+            width: 100px;
+            margin-left: -15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .footer img {
+            width: 90px;
+            margin-left: -10px;
+        }
+    }
+    
+    .footer .info img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    }
+    
+    @media (min-width: 992px) {
+        .footer .info img {
+            margin-left: -1000px;
+        }
+    }
+    
+    .footer h5 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #D4AF37; /* اللون الذهبي */
+        text-align: center;
+    }
+    
+    .footer p,
+    .footer a {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #ccc;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .footer p:hover,
+    .footer a:hover {
+        color: #D4AF37; /* اللون الذهبي */
+    }
+    
+    .footer .social-icons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-right: 0;
+    }
+    
+    @media (max-width: 768px) {
+        .footer .social-icons {
+            gap: 10px;
+        }
+    
+        .footer .social-icons a {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .footer .social-icons {
+            gap: 8px;
+        }
+    
+        .footer .social-icons a {
+            font-size: 1.1rem;
+            padding: 6px;
+        }
+    }
+    
+    .footer .social-icons a {
+        color: #fff;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer .social-icons a:hover {
+        color: #D4AF37; /* اللون الذهبي */
+        transform: scale(1.1);
+        background-color: rgba(212, 175, 55, 0.2); /* خلفية ذهبية شفافة */
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.7); /* ظل ذهبي */
+    }
+    
+    .footer .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .footer .col {
+        flex: 1 1 300px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+        .footer .info img {
+            width: 100px;
+            height: 100px;
+        }
+    
+        .footer h5 {
+            font-size: 1.3rem;
+        }
+    
+        .footer p,
+        .footer a {
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .footer {
+            padding: 30px 15px;
+        }
+    
+        .footer h5 {
+            font-size: 1.2rem;
+        }
+    
+        .footer p,
+        .footer a {
+            font-size: 0.8rem;
+        }
+    
+        .footer .social-icons a {
+            font-size: 1.1rem;
+        }
+    }
+    
+    /* ======================== Breaking News Section ======================== */
+    .breaking-news {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #141414; /* اللون الذهبي */
+        border: 2px solid #D4AF37; /* اللون الذهبي */
+        border-radius: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        padding: 1rem 2rem;
+        background: #002B5C; /* اللون الأزرق الداكن */
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B); font-weight: bold;
+    }
+    .custom-gradient {
+        background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);
+        color: #002B5C; 
+        font-weight: bold;
+        padding: 20px; 
+        border-radius: 10px; /* إضافة زوايا مستديرة */
+        text-align: center; /* توسيط النص */
+    }
+    
+
+    .contact .btn {
+        background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);
+        color: #002B5C; 
+        font-weight: bold;
+        text-align: center; /* توسيط النص */
+        
+    }
+    .contact .btn :hover {
+        color: #D4AF37; /* اللون الذهبي */
+        transform: scale(1.1);
+        background-color: rgba(212, 175, 55, 0.2); /* خلفية ذهبية شفافة */
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.7); /* ظل ذهبي */
+    }
