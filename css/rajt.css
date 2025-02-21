@@ -269,6 +269,14 @@ p {
         font-size: 1.2rem; /* حجم أيقونات أصغر للشاشات الصغيرة */
     }
 }
+.social-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px); /* تحريك الأيقونة للأعلى عند التفاعل */
+    color: #007bff; /* لون أزرق عند التحويل */
+}
 
 /* ======================== */
 /* Responsive Styles */
