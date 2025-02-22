@@ -2,16 +2,15 @@
 /* Root Variables (Colors) */
 /* ======================== */
 :root {
-    --gold: #D4AF37; /* اللون الذهبي */
-    --dark-blue: rgb(1,83,141); /* اللون الأزرق الداكن */
-    --dark-blueone:#01538d;
-    --white: #FFFFFF; /* اللون الأبيض */
-    --light-gray: #F5F5F5; /* اللون الرمادي الفاتح */
-    --charcoal-gray: #333333; /* اللون الرمادي الداكن */
-    --ack: #cad7df33; /* لون أزرق رمادي ناعم */
-    --blow: #a1cfec33; /* لون أزرق سماوي فاتح */
-    --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* التدرج الذهبي */
-
+    --gold: #D4AF37; /* Gold color */
+    --dark-blue: rgb(1,83,141); /* Dark blue color */
+    --dark-blueone: #01538d; /* Dark blue alternative */
+    --white: #FFFFFF; /* White color */
+    --light-gray: #F5F5F5; /* Light gray color */
+    --charcoal-gray: #333333; /* Dark gray color */
+    --ack: #cad7df33; /* Soft blue-gray color */
+    --blow: #a1cfec33; /* Light sky blue color */
+    --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* Gold gradient */
 }
 
 /* ======================== */
@@ -23,8 +22,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    direction: rtl; /* تخطيط من اليمين لليسار للعربية */
-    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    direction: rtl; /* Right-to-left layout for Arabic */
+    color: var(--dark-blue); /* Default text color */
 }
 
 /* ======================== */
@@ -33,13 +32,13 @@ body {
 h1, h2, h3 {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-weight: 700;
-    color: var(--white); /* تغيير لون العناوين إلى الأزرق الداكن */
+    color: var(--white); /* Heading text color */
 }
 
 p {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
-    color: var(--white); /* تغيير لون الفقرات إلى الأزرق الداكن */
+    color: var(--white); /* Paragraph text color */
 }
 
 /* ======================== */
@@ -47,7 +46,7 @@ p {
 /* ======================== */
 .btn-primary {
     background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-    color: var(--dark-blueone); /* تغيير لون النص إلى الأزرق الداكن */
+    color: var(--dark-blueone); /* Button text color */
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
@@ -58,9 +57,9 @@ p {
 /* ======================== */
 .navbar-custom {
     background: linear-gradient(180deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.8));
-    backdrop-filter: blur(10px); /* تأثير الزجاج المعتم */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* ظل ناعم */
-    border-bottom: 1px solid rgba(255, 215, 0, 0.5); /* حدود ذهبية خفيفة */
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    border-bottom: 1px solid rgba(255, 215, 0, 0.5); /* Light gold border */
     min-height: 90px;
     padding: 10px 20px;
 }
@@ -71,7 +70,7 @@ p {
 
 /* Navbar Logo */
 .navbar-custom .navbar-brand {
-    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    color: var(--dark-blue); /* Logo text color */
     font-size: 1.5rem;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -98,7 +97,7 @@ p {
 
 /* Navbar Links */
 .navbar-custom .nav-link {
-    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    color: var(--dark-blue); /* Link text color */
     font-size: 1rem;
     font-weight: 500;
     position: relative;
@@ -108,18 +107,18 @@ p {
 }
 
 .navbar-custom .nav-link:hover {
-    color: var(--gold); /* تغيير لون النص إلى الذهبي عند التحويم */
+    color: var(--gold); /* Hover text color */
     background-color: rgba(255, 215, 0, 0.1);
 }
 
 .navbar-custom .nav-link.active {
-    color: var(--gold); /* تغيير لون النص إلى الذهبي للرابط النشط */
+    color: var(--gold); /* Active link text color */
 }
 
 /* Navbar Toggler (Hamburger Menu) */
 .navbar-custom .navbar-toggler {
     border: none;
-    color: var(--gold); /* تغيير لون النص إلى الذهبي */
+    color: var(--gold); /* Toggler icon color */
     font-size: 1.5rem;
     padding: 8px;
     transition: transform 0.3s ease;
@@ -137,7 +136,7 @@ p {
 /* Search Bar */
 .navbar-custom .search {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid var(--gold); /* تغيير لون الحدود إلى الذهبي */
+    border: 2px solid var(--gold); /* Search bar border color */
     border-radius: 30px;
     padding: 0.4rem 1rem;
     display: flex;
@@ -150,17 +149,17 @@ p {
     outline: none;
     width: 100%;
     font-size: 1rem;
-    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
+    color: var(--dark-blue); /* Input text color */
 }
 
 .navbar-custom .search input::placeholder {
-    color: var(--charcoal-gray); /* تغيير لون النص البديل إلى الرمادي الداكن */
+    color: var(--charcoal-gray); /* Placeholder text color */
     font-style: italic;
 }
 
 .navbar-custom .search button {
-    background-color: var(--gold); /* تغيير لون الخلفية إلى الذهبي */
-    color: var(--white); /* تغيير لون النص إلى الأبيض */
+    background-color: var(--gold); /* Search button background color */
+    color: var(--white); /* Search button text color */
     border: none;
     border-radius: 50%;
     padding: 0.5rem;
@@ -168,7 +167,7 @@ p {
 }
 
 .navbar-custom .search button:hover {
-    background-color: #D4AF37; /* تغيير لون الخلفية إلى الذهبي الداكن عند التحويم */
+    background-color: #D4AF37; /* Hover background color */
 }
 
 /* ======================== */
@@ -178,18 +177,18 @@ p {
     height: 100vh !important;
     background: linear-gradient(
         135deg,
-        rgba(248, 251, 255, 0.9), /* الأزرق الداكن مع شفافية */
-        rgba(230, 214, 129, 0.9)   /* الذهبي الفاتح مع شفافية */
+        rgba(248, 251, 255, 0.9), /* Dark blue with transparency */
+        rgba(230, 214, 129, 0.9)   /* Light gold with transparency */
     );
-    backdrop-filter: blur(10px); /* تأثير ضبابي */
-    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1); /* ظل ناعم */
-    width: 300px; /* عرض ثابت للقائمة الجانبية */
-    transition: transform 0.3s ease-in-out; /* تأثير انزلاق سلس */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 300px; /* Fixed width for the sidebar */
+    transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
 }
 
 /* Offcanvas Header */
 .offcanvas-header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* حدود خفيفة */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -197,13 +196,13 @@ p {
 }
 
 .offcanvas-header .btn-close {
-    font-size: 1.5rem; /* حجم أكبر لزر الإغلاق */
-    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
-    transition: transform 0.3s ease; /* تأثير دوران سلس */
+    font-size: 1.5rem; /* Larger close button */
+    color: var(--dark-blue); /* Close button color */
+    transition: transform 0.3s ease; /* Smooth rotation effect */
 }
 
 .offcanvas-header .btn-close:hover {
-    transform: rotate(90deg); /* تدوير زر الإغلاق عند التحويم */
+    transform: rotate(90deg); /* Rotate on hover */
 }
 
 /* Offcanvas Body */
@@ -220,37 +219,37 @@ p {
 }
 
 .offcanvas-body .nav-link {
-    font-size: 1.1rem; /* حجم خط أكبر قليلاً */
-    font-weight: 500; /* وزن متوسط للخط */
-    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
-    padding: 0.75rem 1rem; /* تباعد مريح */
-    border-radius: 8px; /* زوايا دائرية */
-    transition: all 0.3s ease; /* تأثير تحويم سلس */
-    text-align: right; /* محاذاة النص إلى اليمين للتخطيط من اليمين لليسار */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: 500; /* Medium font weight */
+    color: var(--dark-blue); /* Link text color */
+    padding: 0.75rem 1rem; /* Comfortable spacing */
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    text-align: right; /* Right-align text for RTL layout */
 }
 
 .offcanvas-body .nav-link:hover {
-    background-color: rgba(255, 215, 0, 0.1); /* خلفية ذهبية خفيفة عند التحويم */
-    color: var(--gold); /* تغيير لون النص إلى الذهبي */
+    background-color: rgba(255, 215, 0, 0.1); /* Light gold background on hover */
+    color: var(--gold); /* Hover text color */
 }
 
 /* Offcanvas Footer (Social Icons) */
 .offcanvas-footer {
     padding: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* حدود خفيفة */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
     text-align: center;
 }
 
 .offcanvas-footer .social-icon {
-    color: var(--dark-blue); /* تغيير لون النص إلى الأزرق الداكن */
-    font-size: 1.5rem; /* حجم أكبر للأيقونات */
-    margin: 0 0.5rem; /* تباعد بين الأيقونات */
-    transition: all 0.3s ease; /* تأثير تحويم سلس */
+    color: var(--dark-blue); /* Social icon color */
+    font-size: 1.5rem; /* Larger icon size */
+    margin: 0 0.5rem; /* Spacing between icons */
+    transition: all 0.3s ease; /* Smooth hover effect */
 }
 
 .offcanvas-footer .social-icon:hover {
-    color: var(--gold); /* تغيير لون النص إلى الذهبي عند التحويم */
-    transform: translateY(-3px); /* تأثير رفع خفيف */
+    color: var(--gold); /* Hover icon color */
+    transform: translateY(-3px); /* Slight lift effect */
 }
 
 /* ======================== */
@@ -258,24 +257,25 @@ p {
 /* ======================== */
 @media (max-width: 767.98px) {
     .offcanvas {
-        width: 250px; /* عرض أصغر قليلاً للشاشات الصغيرة */
+        width: 250px; /* Slightly smaller width for small screens */
     }
 
     .offcanvas-body .nav-link {
-        font-size: 1rem; /* حجم خط أصغر للشاشات الصغيرة */
+        font-size: 1rem; /* Smaller font size for small screens */
     }
 
     .offcanvas-footer .social-icon {
-        font-size: 1.2rem; /* حجم أيقونات أصغر للشاشات الصغيرة */
+        font-size: 1.2rem; /* Smaller icon size for small screens */
     }
 }
+
 .social-icon {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: translateY(-3px); /* تحريك الأيقونة للأعلى عند التفاعل */
-    color: #007bff; /* لون أزرق عند التحويل */
+    transform: translateY(-3px); /* Lift icon on hover */
+    color: #007bff; /* Blue color on hover */
 }
 
 /* ======================== */
@@ -646,8 +646,6 @@ p {
         right: 5px;
     }
 }
-
-
 
 /* ======================== */
 /* End Hero Section */

@@ -12,9 +12,7 @@
     --blow: #a1cfec33; /* لون أزرق سماوي فاتح */
     --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* التدرج الذهبي */
 
-
 }
-
 
 /* ======================== */
 /* General Styling */
@@ -347,9 +345,6 @@ p {
     }
 }
 
-
-
-
 /*end navbar*/
   
 /* بداية قسم الاباوت */
@@ -542,8 +537,8 @@ body {
     overflow: hidden;
     border: none;
     border-radius: 15px;
-    background: #fefff4;
-    color: var(--text-color);
+    background:#053d62;
+    color: var(--white);
     transition: transform var(--transition-speed) ease-in-out;
     height: 320px;
     display: flex;
@@ -563,7 +558,7 @@ body {
 .card .icon {
     font-size: 40px;
     margin-bottom: 15px;
-    color: var(--text-color); /* لون الأيقونات */
+    color:#B8860B
 }
 
 .card-title {
@@ -643,7 +638,6 @@ body {
     background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
     margin: 5px auto 0;
 }
-
 
 .btn-gold {
     background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
@@ -773,8 +767,6 @@ body {
     }
 }
 /* نهاية قسم الارقام */
-
-
 
 /* بداية قسم الشهادات */
 #certifications {
