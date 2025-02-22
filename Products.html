@@ -1,19 +1,23 @@
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAGT</title>
+  <title>RAGT | منتجات غذائية عالية الجودة</title>
+  <meta name="description"
+    content="اكتشف تشكيلتنا المميزة من المنتجات الغذائية وغير الأساسية بجودة عالية. نحن نقدم أفضل الحلول لتلبية احتياجاتك.">
+  <meta name="keywords"
+    content="منتجات غذائية, مواد غذائية, بيسان, خدمات RAGT, تواصل معنا, RAGT, جودة عالية, مواد غذائية غير أساسية">
+  <link rel="canonical" href="https://www.example.com/Products.html" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/products.css">
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap"
     rel="stylesheet">
-
 </head>
-<script src="js/script.js"></script>
 
 <body>
   <!-- Navbar -->
@@ -142,7 +146,69 @@
     </div>
   </section>
 
-  
+  <SCript>
+    document.addEventListener("DOMContentLoaded", function () {
+      // تأثير تحميل الصفحة تدريجيًا
+      document.body.style.opacity = "0";
+      document.body.style.transition = "opacity 0.8s ease-in-out";
+      setTimeout(() => (document.body.style.opacity = "1"), 100);
+
+      // تحديد جميع عناصر المنتجات
+      const productCards = document.querySelectorAll(".product-card");
+
+      // تأثير ظهور المنتجات عند التمرير
+      const revealOnScroll = () => {
+        productCards.forEach((card, index) => {
+          const cardTop = card.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (cardTop < windowHeight - 50) {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0) scale(1)";
+            card.style.transition = `opacity 0.5s ease-out ${index * 0.1}s, transform 0.5s ease-out ${index * 0.1}s`;
+          }
+        });
+      };
+
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll(); // تشغيل التأثير عند التحميل
+
+      // تأثير تحريك الصور عند التحويم
+      const images = document.querySelectorAll(".product-card img");
+
+      images.forEach((img) => {
+        img.addEventListener("mouseenter", () => {
+          img.style.transform = "scale(1.08)";
+          img.style.transition = "transform 0.3s ease-in-out";
+        });
+
+        img.addEventListener("mouseleave", () => {
+          img.style.transform = "scale(1)";
+        });
+      });
+
+      // تأثير تفاعل الأزرار عند المرور عليها
+      const buttons = document.querySelectorAll(".product-overlay a");
+
+      buttons.forEach((button) => {
+        button.addEventListener("mouseenter", () => {
+          button.style.transform = "scale(1.1)";
+          button.style.background = "var(--white)";
+          button.style.color = "var(--dark-blue)";
+          button.style.transition = "all 0.3s ease-in-out";
+        });
+
+        button.addEventListener("mouseleave", () => {
+          button.style.transform = "scale(1)";
+          button.style.background = "var(--gold)";
+          button.style.color = "var(--dark-blue)";
+        });
+      });
+    });
+
+  </SCript>
+
+
 
 
 
