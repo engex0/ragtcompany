@@ -1024,7 +1024,7 @@ p {
     outline: none;
 }
 
-.subscription-section .btn-primary {
+.subscription-section .btn-gold {
     background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);    width: auto;
     border-radius: 30px;
     font-weight: bold;

@@ -747,7 +747,26 @@ body.loaded {
         font-size: 1.1rem;
     }
 }
+.contact ul {
+    display: flex;
+    justify-content: center; /* يجعل الأيقونات في المنتصف */
+    align-items: center;
+    padding: 0;
+}
 
+.contact ul li {
+    margin: 0 5px; /* يضيف تباعدًا متناسقًا بين الأيقونات */
+}
+
+.contact ul a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;  /* حجم الأيقونة */
+    height: 40px;
+    border-radius: 50%; /* يجعل الأيقونة دائرية */
+    color: white;
+}
 /* ======================== Breaking News Section ======================== */
 .breaking-news {
     font-size: 1.2rem;

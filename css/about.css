@@ -359,14 +359,15 @@ p {
 /* -------------------------------- */
 .hero-section {
     position: relative;
-    color: white;
-    background: url('../IMG/44.JPG') no-repeat center center/cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 1; /* لضمان بقاء المحتوى فوق الطبقة السوداء */
+    height: 60vh; /* ارتفاع القسم */
+    overflow: hidden; /* إخفاء الأجزاء الزائدة من الصورة */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تغطية المساحة مع الحفاظ على نسبة الصورة */
+    object-position: center; /* توسيط الصورة */
 }
 
 /* إضافة طبقة تعتيم سوداء */
@@ -382,8 +383,9 @@ p {
 }
 
 .about-section {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     padding: 3rem 0;
+    
 }
 
 /* Container Layout */
@@ -473,6 +475,7 @@ p {
     position: relative;
     text-align: center;
     overflow: hidden;
+    
 }
 
 /* Section Titles */
@@ -495,149 +498,173 @@ p {
 /* -------------------------------- */
 /* About Us Cards */
 /* -------------------------------- */
+/* خط فاصل بين الأقسام */
+.section-divider {
+    border: none;
+    height: 5px;
+    background:var(--charcoal-gray); /* تدرج ذهبي */
+    margin: 60px auto; /* مسافة أعلى وأسفل الخط */
+    width: 100%
+}
 
-.aboutus-card {
-    background: #ffffff;
+/* تحسين استجابة الخط الفاصل */
+@media (max-width: 768px) {
+    .section-divider {
+        width: 100%; /* تقليل العرض على الأجهزة الصغيرة */
+        margin: 40px auto;
+    }
+}
+:root {
+    --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* التدرج الذهبي */
+    --text-color: #1a237e; /* أزرق غامق */
+    --hover-color: rgba(0, 0, 50, 0.9); /* لون الستار المتحرك */
+    --transition-speed: 0.4s; /* سرعة الانتقال */
+}
+
+body {
+    background:var(--white);
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    direction: rtl;
+    
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border: none;
     border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 280px;
-    min-height: 320px;
+    background: #fefff4;
+    color: var(--text-color);
+    transition: transform var(--transition-speed) ease-in-out;
+    height: 320px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    margin: 15px auto;
     text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.aboutus-card:hover {
+.card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Card Icons */
-.aboutus-card .aboutus-icon {
-    font-size: 3rem;
-    background-color: var(--gold-gradient);
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--text-color); /* لون الأيقونات */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
     margin-bottom: 15px;
 }
 
-/* Card Titles */
-.aboutus-card-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #01538d;
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+}
+
+.card ul li {
     margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
-/* Card Text */
-.aboutus-card-text {
-    font-size: 1rem;
-    color: #6c757d;
-    line-height: 1.6;
-    padding: 0 15px;
-    word-wrap: break-word;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Cards Grid Layout */
-.aboutus-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* -------------------------------- */
-/* Buttons */
-/* -------------------------------- */
-
-.aboutus-btn {
+.btn-custom {
     background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-    color: #ffffff;
-    border: none;
+    color: white;
     padding: 12px 30px;
-    font-size: 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
     font-weight: bold;
-    border-radius: 50px;
-    transition: all 0.3s ease;
+    transition: background var(--transition-speed) ease-in-out;
+    margin-top: 20px;
 }
 
-
-
-/* -------------------------------- */
-/* Animation Effects */
-/* -------------------------------- */
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn-custom:hover {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    transform: scale(1.05);
 }
 
-.fade-in {
-    animation: fadeInUp 1s ease-out;
-}
-
-/* -------------------------------- */
-/* Responsive Styling */
-/* -------------------------------- */
-
-/* Mobile Adjustments */
-@media (max-width: 767px) {
-    .aboutus-card {
-        width: 90%;
-        max-width: 300px;
-        min-height: auto;
+/* تحسين الاستجابة */
+@media (max-width: 768px) {
+    .card {
+        height: auto;
+        margin-bottom: 20px;
         padding: 15px;
     }
 
-    .aboutus-card-title {
-        font-size: 1.2rem;
+    .section-title {
+        font-size: 2rem;
     }
 
-    .aboutus-card-text {
-        font-size: 0.95rem;
-        padding: 0 10px;
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .card ul li {
+        font-size: 0.8rem;
+    }
+
+    .btn-custom {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .main-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-title p {
+        font-size: 1rem;
+    }
+
+    .gold-line {
+        width: 150px;
     }
 }
 
-/* Tablet & Small Screen Adjustments */
-@media (min-width: 768px) {
-    .aboutus-card {
-        width: 250px;
-        height: 250px;
-        display: inline-block;
-        margin: 15px;
-    }
-}
-
-/* Large Screen Adjustments */
-@media (min-width: 992px) {
-    .about-section {
-        padding: 5rem 0;
-    }
+.main-title .gold-line {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    margin: 5px auto 0;
 }
 
 
-
+.btn-gold {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    color: var(--dark-blue);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.75rem 1.5rem; /* استخدام وحدات rem */
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 1rem; /* 16px */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem; /* 16px */
+}
 /* نهاية قسم تعرف عنا اكثر */
 
 /*بداية قسم الارقام*/
 
 #stats {
-    background: var(--light-gray); /* خلفية خفيفة */
+    background: var(--white); /* خلفية خفيفة */
     padding: 70px 0;
     overflow: hidden;
     position: relative;
@@ -952,7 +979,26 @@ p {
         font-size: 1.1rem;
     }
 }
+.contact ul {
+    display: flex;
+    justify-content: center; /* يجعل الأيقونات في المنتصف */
+    align-items: center;
+    padding: 0;
+}
 
+.contact ul li {
+    margin: 0 5px; /* يضيف تباعدًا متناسقًا بين الأيقونات */
+}
+
+.contact ul a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;  /* حجم الأيقونة */
+    height: 40px;
+    border-radius: 50%; /* يجعل الأيقونة دائرية */
+    color: white;
+}
 /* ======================== Breaking News Section ======================== */
 .breaking-news {
     font-size: 1.2rem;

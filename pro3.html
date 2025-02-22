@@ -17,55 +17,56 @@
     
     <!-- Navbar -->
     <section>
-        <!-- ناف بار مع التنسيق المطلوب -->
         <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
-            <div class="container d-flex justify-content-between align-items-center">
-
-                <!-- شعار الشركة في الجهة اليمنى -->
-                <a class="navbar-brand" href="#">
-                    <img src="img/1.PNG" alt="شعار الشركة" class="logo">
-                </a>
-
-                <!-- القائمة للكمبيوتر -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-                    </ul>
-                </div>
-
-                <!-- زر القائمة للهاتف -->
-                <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#mainNavbar">
-                    <i class="fa-solid fa-bars fs-2"></i>
-                </button>
+          <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+              <img src="img/1.PNG" alt="شعار الشركة - وصف للشعار" class="logo" loading="lazy">
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fw-bold" href="index.html">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="about.html">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="services.html">الخدمات</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="Products.html">المنتجات</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">تواصل معنا</a></li>
+              </ul>
             </div>
+            <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavbar" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars fs-1"></i>
+            </button>
+          </div>
         </nav>
-
+      
         <!-- القائمة الجانبية للهاتف -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainNavbar">
-            <div class="offcanvas-header">
-                <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body text-end">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-                </ul>
-            </div>
-            <div class="offcanvas-footer text-center mt-auto pb-3">
-                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-facebook-f fs-4"></i></a>
-                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-linkedin-in fs-4"></i></a>
-                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-instagram fs-4"></i></a>
+        <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mainNavbar">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body text-end">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+              <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+            </ul>
+          </div>
+          <div class="offcanvas-footer text-center pb-3" style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); width: 100%;">
+            <div class="d-flex justify-content-center align-items-center gap-4">
+                <a href="#" class="social-icon text-dark">
+                    <i class="fa-brands fa-instagram fs-3"></i>
+                </a>
+                <a href="#" class="social-icon text-dark">
+                    <i class="fa-brands fa-linkedin-in fs-3"></i>
+                </a>
+                <a href="#" class="social-icon text-dark">
+                    <i class="fa-brands fa-facebook-f fs-3"></i>
+                </a>
             </div>
         </div>
-    </section>
+        
+        </div>
+      </section>
 
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -179,7 +180,7 @@
     <!-- ✅ قسم العنوان والزر -->
 
 
-<!-- ✅ نافذة الاختبار المنبثقة -->
+<!-- ✅ زر عائم لفتح الاختبار -->
 <!-- ✅ زر عائم لفتح الاختبار -->
 <button class="ask-btn" onclick="showQuizModal()">
     <span>عادي أسألك؟</span> 
@@ -192,7 +193,10 @@
         <div class="modal-content p-4">
             <div class="modal-header">
                 <h5 class="modal-title fw-bold">تحب تعرف مشروبك المفضل مع بيسان؟ 🥤</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <!-- زر الإغلاق المخصص -->
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             <div class="modal-body">
                 <p class="text-muted fw-bold">جاوب بسرعة وخلينا نعرف أي نكهة من بيسان تناسبك! </p>
@@ -229,7 +233,7 @@
     </div>
 </div>
 
-<!-- ✅ تحسين تحريك الزر -->
+<!-- ✅ تحسين التصميم والتفاعلات -->
 <style>
    /* زر "عادي أسألك؟" بتصميم عصري */
 .ask-btn {
@@ -251,6 +255,11 @@
     animation: bounce 1.5s infinite;
 }
 
+.ask-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
 .ask-btn i {
     font-size: 20px;
 }
@@ -266,10 +275,17 @@
     border-radius: 15px;
     border: none;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
 }
 
 .modal-header {
     border-bottom: none;
+    padding-bottom: 0;
+    position: relative;
 }
 
 .modal-title {
@@ -278,10 +294,56 @@
     color: #333;
 }
 
-.btn-close {
-    font-size: 16px;
+/* زر الإغلاق المخصص */
+.btn-close-custom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.btn-close-custom:hover {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-close-custom:active {
+    transform: scale(0.9); /* تأثير الضغط */
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* تحسين الأزرار داخل النافذة */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* تحسين النتيجة */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+}
 </style>
 
 <!-- ✅ كود جافاسكربت -->
@@ -313,7 +375,6 @@ function getDrinkResult() {
 
     result.innerHTML = `<p class="alert alert-success">${drinkMessages[drink]}</p>`;
 }
-
 </script>
 
     
@@ -327,114 +388,88 @@ function getDrinkResult() {
 
 
     <!-- Footer -->
-    <div class="footer pt-5 pb-5 text-white-50 text-center text-md-end"
-        style="background: linear-gradient(180deg, #002B5C, #001D3D); direction: rtl;">
+    <div class="footer pt-5 pb-5 text-white-50 text-center text-md-end">
         <div class="container">
             <!-- إعلان العروض -->
-            <div class="breaking-news text-center p-2 mb-4"
-                style="background-color: #D4AF37; color: #002B5C; font-weight: bold;">
+            <div class="breaking-news text-center p-2 mb-4">
             </div>
-
             <div class="row">
-                <!-- معلومات الشركة -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="info mb-5">
-                        <img src="img/1.PNG" alt="الشعار" class="logo-image mb-4 rounded-circle shadow-lg" />
-                        <p class="mb-4">نحن نلتزم بتقديم أعلى مستويات الجودة في كل ما نقوم به، مما يضمن تعزيز نجاح
-                            عملائنا.</p>
-
-                        </p>
-                        <div class="copyright">
-                            <p>تصميم بواسطة <span class="text-warning">المهندس: عبدالمعين رزق</span></p>
-                            <p>&copy; 2025 - <span class="text-warning">RAGT Inc</span></p>
-                        </div>
-                    </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="info mb-5">
+                  <img src="img/1.PNG" alt="الشعار" class="logo-image mb-4 rounded-circle shadow-lg" />
+                  <p class="mb-4">نحن نلتزم بتقديم أعلى مستويات الجودة في كل ما نقوم به، مما يضمن تعزيز نجاح عملائنا.</p>
+                  <div class="copyright">
+                    <p>تصميم بواسطة <span class="text-warning">المهندس: عبدالمعين رزق</span></p>
+                    <p>&copy; 2025 - <span class="text-warning">.RAGT Inc</span></p>
+                  </div>
                 </div>
-
-                <!-- الروابط -->
-                <div class="col-md-6 col-lg-2">
-                    <div class="links">
-                        <h5 class="text-light mb-4 text-center">روابط</h5>
-                        <ul class=" lh-lg text-center">
-                            <li><a href="index.html" class="text-decoration-none text-white-50 hover-link">الرئيسية</a>
-                            </li>
-                            <li><a href="about.html" class="text-decoration-none text-white-50 hover-link">من نحن</a>
-                            </li>
-                            <li><a href="services.html"
-                                    class="text-decoration-none text-white-50 hover-link">خدماتنا</a></li>
-                            <li><a href="products.html"
-                                    class="text-decoration-none text-white-50 hover-link">منتجاتنا</a></li>
-                            <li><a href="contact.html" class="text-decoration-none text-white-50 hover-link">تواصل
-                                    معنا</a></li>
-                        </ul>
-                    </div>
+              </div>
+              <div class="col-md-6 col-lg-2">
+                <div class="links">
+                  <h5 class="text-light mb-4 text-center">روابط</h5>
+                  <ul class="lh-lg text-center">
+                    <li><a href="index.html" class="text-decoration-none text-white-50 hover-link">الرئيسية</a></li>
+                    <li><a href="about.html" class="text-decoration-none text-white-50 hover-link">من نحن</a></li>
+                    <li><a href="services.html" class="text-decoration-none text-white-50 hover-link">خدماتنا</a></li>
+                    <li><a href="products.html" class="text-decoration-none text-white-50 hover-link">منتجاتنا</a></li>
+                    <li><a href="contact.html" class="text-decoration-none text-white-50 hover-link">تواصل معنا</a></li>
+                  </ul>
                 </div>
-
-                <!-- التواصل -->
-                <div class="col-md-6 col-lg-4 text-center">
-                    <div class="contact">
-                        <h5 class="text-light mb-4">تواصل معنا</h5>
-                        <p class="lh-lg mb-4">ابقَ على تواصل معنا عبر البريد الإلكتروني أو الهاتف. نحن بانتظار رسائلكم!
-                        </p>
-                        <a class="btn btn-warning text-dark fw-bold w-100 rounded-pill"
-                            href="mailto:ragt@gmail.com">info@ragtco.com</a>
-                        <ul class="d-flex mt-4 list-unstyled gap-3 justify-content-center">
-                            <li>
-                                <a class="text-light hover-link" href="#"><i
-                                        class="fa-brands fa-facebook fa-lg rounded-circle p-2"
-                                        style="background-color: #3b5998;"></i></a>
-                            </li>
-                            <li>
-                                <a class="text-light hover-link" href="#">
-                                    <i class="fa-brands fa-instagram fa-lg rounded-circle p-2"
-                                        style="background-color: #E4405F;"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="text-light hover-link"
-                                    href="https://www.linkedin.com/company/ragtco/posts/?feedView=all"><i
-                                        class="fa-brands fa-linkedin fa-lg rounded-circle p-2"
-                                        style="background-color: #0077b5;"></i></a>
-                            </li>
-                            <li>
-                                <a class="text-light hover-link" href="#"><i
-                                        class="fa-brands fa-youtube fa-lg rounded-circle p-2"
-                                        style="background-color: #ff0000;"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                <!--قسم البوتن الخاص بالفوتر -->
+              </div>
+              <div class="col-md-6 col-lg-4 text-center">
+                <div class="contact">
+                  <h5 class="text-light mb-4">تواصل معنا</h5>
+                  <p class="lh-lg mb-4">ابقَ على تواصل معنا عبر البريد الإلكتروني أو الهاتف. نحن بانتظار رسائلكم!</p>
+                  <a class="btn btn-warning text-dark fw-bold w-100 rounded-pill" href="mailto:ragt@gmail.com">info@ragtco.com</a>
+                  <ul class="d-flex mt-4 list-unstyled gap-3 justify-content-center">
+                    <li>
+                      <a class="text-light hover-link" href="#"><i class="fa-brands fa-facebook fa-lg rounded-circle p-2" style="background-color: #3b5998;"></i></a>
+                    </li>
+                    <li>
+                      <a class="text-light hover-link" href="#">
+                        <i class="fa-brands fa-instagram fa-lg rounded-circle p-2" style="background-color: #E4405F;"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="text-light hover-link" href="https://www.linkedin.com/company/ragtco/posts/?feedView=all"><i class="fa-brands fa-linkedin fa-lg rounded-circle p-2" style="background-color: #0077b5;"></i></a>
+                    </li>
+                    <li>
+                      <a class="text-light hover-link" href="#"><i class="fa-brands fa-youtube fa-lg rounded-circle p-2" style="background-color: #ff0000;"></i></a>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const footer = document.querySelector(".footer");
-            if (!footer) return; // التحقق من وجود الفوتر لتجنب الأخطاء
-            const socialIcons = document.querySelectorAll(".footer .social-icons a");
-
-            //  إظهار الفوتر عند التمرير بسلاسة
-            function revealFooter() {
-                let footerPosition = footer.getBoundingClientRect().top;
-                let screenHeight = window.innerHeight;
-
-                if (footerPosition < screenHeight - 100) {
-                    footer.classList.add("visible");
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const footer = document.querySelector(".footer");
+                if (!footer) return; // التحقق من وجود الفوتر لتجنب الأخطاء
+                const socialIcons = document.querySelectorAll(".footer .social-icons a");
+    
+                // ✅ إظهار الفوتر عند التمرير بسلاسة
+                function revealFooter() {
+                    let footerPosition = footer.getBoundingClientRect().top;
+                    let screenHeight = window.innerHeight;
+    
+                    if (footerPosition < screenHeight - 100) {
+                        footer.classList.add("visible");
+                    }
                 }
-            }
-
-            window.addEventListener("scroll", revealFooter);
-            revealFooter();
-
-            //  إضافة تأثير اهتزاز على أيقونات التواصل الاجتماعي
-            socialIcons.forEach(icon => {
-                icon.addEventListener("mouseenter", () => icon.classList.add("shake"));
-                icon.addEventListener("animationend", () => icon.classList.remove("shake"));
+    
+                window.addEventListener("scroll", revealFooter);
+                revealFooter();
+    
+                // ✅ إضافة تأثير اهتزاز على أيقونات التواصل الاجتماعي
+                socialIcons.forEach(icon => {
+                    icon.addEventListener("mouseenter", () => icon.classList.add("shake"));
+                    icon.addEventListener("animationend", () => icon.classList.remove("shake"));
+                });
             });
-        });
-
-    </script>
+    
+        </script>
 
 
     <script>

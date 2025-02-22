@@ -50,12 +50,9 @@
     <!-- القائمة الجانبية للهاتف -->
     <!-- Offcanvas Navbar -->
     <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mainNavbar">
-      <!-- زر الإغلاق -->
       <div class="offcanvas-header">
         <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-
-      <!-- القائمة -->
       <div class="offcanvas-body text-end">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
@@ -65,13 +62,20 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
         </ul>
       </div>
-
-      <!-- الأيقونات الاجتماعية -->
-      <div class="offcanvas-footer text-center mt-auto pb-3">
-        <a href="#" class="social-icon mx-2"><i class="fa-brands fa-facebook-f fs-4"></i></a>
-        <a href="#" class="social-icon mx-2"><i class="fa-brands fa-linkedin-in fs-4"></i></a>
-        <a href="#" class="social-icon mx-2"><i class="fa-brands fa-instagram fs-4"></i></a>
-      </div>
+      <div class="offcanvas-footer text-center pb-3" style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); width: 100%;">
+        <div class="d-flex justify-content-center align-items-center gap-4">
+            <a href="#" class="social-icon text-dark">
+                <i class="fa-brands fa-instagram fs-3"></i>
+            </a>
+            <a href="#" class="social-icon text-dark">
+                <i class="fa-brands fa-linkedin-in fs-3"></i>
+            </a>
+            <a href="#" class="social-icon text-dark">
+                <i class="fa-brands fa-facebook-f fs-3"></i>
+            </a>
+        </div>
+    </div>
+    
     </div>
   </section>
 
@@ -247,27 +251,35 @@
           <!--قسم البوتن الخاص بالفوتر -->
         </div>
         <div class="col-md-6 col-lg-4 text-center">
-          <div class="contact">
+          <div class="contact text-center">
             <h5 class="text-light mb-4">تواصل معنا</h5>
             <p class="lh-lg mb-4">ابقَ على تواصل معنا عبر البريد الإلكتروني أو الهاتف. نحن بانتظار رسائلكم!</p>
-            <a class="btn btn-warning text-dark fw-bold w-100 rounded-pill" href="mailto:ragt@gmail.com">info@ragtco.com</a>
-            <ul class="d-flex mt-4 list-unstyled gap-3 justify-content-center">
-              <li>
-                <a class="text-light hover-link" href="#"><i class="fa-brands fa-facebook fa-lg rounded-circle p-2" style="background-color: #3b5998;"></i></a>
-              </li>
-              <li>
-                <a class="text-light hover-link" href="#">
-                  <i class="fa-brands fa-instagram fa-lg rounded-circle p-2" style="background-color: #E4405F;"></i>
-                </a>
-              </li>
-              <li>
-                <a class="text-light hover-link" href="https://www.linkedin.com/company/ragtco/posts/?feedView=all"><i class="fa-brands fa-linkedin fa-lg rounded-circle p-2" style="background-color: #0077b5;"></i></a>
-              </li>
-              <li>
-                <a class="text-light hover-link" href="#"><i class="fa-brands fa-youtube fa-lg rounded-circle p-2" style="background-color: #ff0000;"></i></a>
-              </li>
+            <a class="btn btn-warning text-dark fw-bold w-100 rounded-pill mb-4" href="mailto:ragt@gmail.com">info@ragtco.com</a>
+            
+            <!-- الأيقونات -->
+            <ul class="d-flex list-unstyled gap-3 justify-content-center">
+                <li>
+                    <a class="text-dark text-decoration-none" href="#">
+                        <i class="fab fa-facebook fa-2x"></i> <!-- حجم الأيقونة: fa-2x -->
+                    </a>
+                </li>
+                <li>
+                    <a class="text-dark text-decoration-none" href="#">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="text-dark text-decoration-none" href="https://www.linkedin.com/company/ragtco/posts/?feedView=all">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="text-dark text-decoration-none" href="#">
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+                </li>
             </ul>
-          </div>
+        </div>
         </div>
       </div>
     </div>

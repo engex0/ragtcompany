@@ -1,7 +1,6 @@
-/* ألوان لهوية */
 /*  Root Variables: Defining Main Colors */
 :root {
-    --gold: #D4AF37;
+    --gold: #FFD700;
     --dark-blue: #002B5C;
     --white: #FFFFFF;
     --light-gray: #F5F5F5;
@@ -19,8 +18,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    direction: rtl;
-    /* إذا كنت تستخدم الموقع بالعربية */
+    direction: rtl; /* إذا كنت تستخدم الموقع بالعربية */
 }
 
 /* Button Styling */
@@ -33,9 +31,7 @@ body {
 }
 
 /* Typography */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-weight: 700;
 }
@@ -48,12 +44,9 @@ p {
 /*  Custom Navbar Styling */
 .navbar-custom {
     background: linear-gradient(180deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.8));
-    backdrop-filter: blur(10px);
-    /* Frosted glass effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    /* Soft shadow */
-    border-bottom: 1px solid rgba(255, 215, 0, 0.5);
-    /* Light golden border */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    border-bottom: 1px solid rgba(255, 215, 0, 0.5); /* Light golden border */
     min-height: 90px;
     padding: 10px 20px;
 }
@@ -164,33 +157,27 @@ p {
 }
 
 .navbar-custom .search button:hover {
-    background-color: #D4AF37;
+    background-color: #FFD700;
 }
 
 /*  Sidebar (Offcanvas) Styling */
 .offcanvas {
     height: 100vh !important;
-    background: linear-gradient(135deg,
-            rgba(248, 251, 255, 0.9),
-            /* الأزرق الداكن مع شفافية */
-            rgba(230, 214, 129, 0.9)
-            /* الذهبي الفاتح مع شفافية */
-        );
-    backdrop-filter: blur(10px);
-    /* تأثير ضبابي */
-    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
-    /* ظل ناعم */
-    width: 300px;
-    /* عرض ثابت للقائمة الجانبية */
-    transition: transform 0.3s ease-in-out;
-    /* تأثير انزلاق سلس */
+    background: linear-gradient(
+        135deg,
+        rgba(248, 251, 255, 0.9), /* الأزرق الداكن مع شفافية */
+        rgba(230, 214, 129, 0.9)   /* الذهبي الفاتح مع شفافية */
+    );
+    backdrop-filter: blur(10px); /* تأثير ضبابي */
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1); /* ظل ناعم */
+    width: 300px; /* عرض ثابت للقائمة الجانبية */
+    transition: transform 0.3s ease-in-out; /* تأثير انزلاق سلس */
 }
 
 
 /* Offcanvas Header */
 .offcanvas-header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    /* Subtle border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -198,17 +185,13 @@ p {
 }
 
 .offcanvas-header .btn-close {
-    font-size: 1.5rem;
-    /* Larger close button */
-    color: var(--dark-blue);
-    /* Use your dark blue color */
-    transition: transform 0.3s ease;
-    /* Smooth rotation effect */
+    font-size: 1.5rem; /* Larger close button */
+    color: var(--dark-blue); /* Use your dark blue color */
+    transition: transform 0.3s ease; /* Smooth rotation effect */
 }
 
 .offcanvas-header .btn-close:hover {
-    transform: rotate(90deg);
-    /* Rotate the close button on hover */
+    transform: rotate(90deg); /* Rotate the close button on hover */
 }
 
 /* Offcanvas Body */
@@ -225,53 +208,37 @@ p {
 }
 
 .offcanvas-body .nav-link {
-    font-size: 1.1rem;
-    /* Slightly larger font size */
-    font-weight: 500;
-    /* Medium font weight */
-    color: var(--dark-blue);
-    /* Use your dark blue color */
-    padding: 0.75rem 1rem;
-    /* Comfortable padding */
-    border-radius: 8px;
-    /* Rounded corners */
-    transition: all 0.3s ease;
-    /* Smooth hover effect */
-    text-align: right;
-    /* Align text to the right for RTL */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: 500; /* Medium font weight */
+    color: var(--dark-blue); /* Use your dark blue color */
+    padding: 0.75rem 1rem; /* Comfortable padding */
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    text-align: right; /* Align text to the right for RTL */
 }
 
 .offcanvas-body .nav-link:hover {
-    background-color: rgba(255, 215, 0, 0.1);
-    /* Light gold background on hover */
-    color: var(--gold);
-    /* Change text color to gold */
+    background-color: rgba(255, 215, 0, 0.1); /* Light gold background on hover */
+    color: var(--gold); /* Change text color to gold */
 }
 
 /* Offcanvas Footer (Social Icons) */
 .offcanvas-footer {
     padding: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    /* Subtle border */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
     text-align: center;
 }
 
 .offcanvas-footer .social-icon {
-    color: var(--dark-blue);
-    /* Use your dark blue color */
-    font-size: 1.5rem;
-    /* Larger icons */
-    margin: 0 0.5rem;
-    /* Spacing between icons */
-    transition: all 0.3s ease;
-    /* Smooth hover effect */
+    color: var(--dark-blue); /* Use your dark blue color */
+    font-size: 1.5rem; /* Larger icons */
+    margin: 0 0.5rem; /* Spacing between icons */
+    transition: all 0.3s ease; /* Smooth hover effect */
 }
 
 .offcanvas-footer .social-icon:hover {
-    color: var(--gold);
-    /* Change icon color to gold on hover */
-    transform: translateY(-3px);
-    /* Slight lift effect */
+    color: var(--gold); /* Change icon color to gold on hover */
+    transform: translateY(-3px); /* Slight lift effect */
 }
 
 /* ======================== */
@@ -279,35 +246,15 @@ p {
 /* ======================== */
 @media (max-width: 767.98px) {
     .offcanvas {
-        width: 250px;
-        /* Slightly smaller width for smaller screens */
+        width: 250px; /* Slightly smaller width for smaller screens */
     }
 
     .offcanvas-body .nav-link {
-        font-size: 1rem;
-        /* Smaller font size for smaller screens */
+        font-size: 1rem; /* Smaller font size for smaller screens */
     }
 
     .offcanvas-footer .social-icon {
-        font-size: 1.2rem;
-        /* Smaller icons for smaller screens */
-    }
-}
-
-/*  Responsive Styles */
-@media (max-width: 991.98px) {
-    .navbar-custom .nav-link {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar-custom .search {
-        margin-top: 1rem;
-        max-width: 100%;
-    }
-
-    .offcanvas-body {
-        padding-top: 2rem;
+        font-size: 1.2rem; /* Smaller icons for smaller screens */
     }
 }
 
@@ -336,7 +283,6 @@ p {
         transform: translateY(-100%);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
@@ -365,6 +311,346 @@ p {
 
 
 /*end navbar*/
+  
+:root {
+    --primary-color: #002B5C; /* الأزرق الداكن */
+    --secondary-color: #FFD700; /* الذهبي */
+    --bg-light: #F8F9FA;
+    --text-color: #333;
+}
+
+.service-section {
+    background-color: var(--bg-light);
+}
+
+.service-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.service-description {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B); /* التدرج الذهبي */
+    width: 80px; /* حجم الدائرة */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    margin: 0 auto 15px; /* توسيط الدائرة وإضافة مسافة */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+    transition: transform 0.3s ease-in-out; /* تأثير عند التحريك */
+}
+
+.icon-box:hover {
+    transform: scale(1.1); /* تكبير بسيط عند التحويم */
+}
+
+
+.service-card:hover .icon-box {
+    transform: scale(1.1);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 14px 35px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .service-title {
+        font-size: 2rem;
+    }
+    .service-description {
+        font-size: 1.1rem;
+    }
+}
+
+.custom-btn {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    color: #fff; /* لون النص */
+    padding: 14px 28px; /* تحسين المساحة الداخلية */
+    border-radius: 8px; /* حواف مستديرة */
+    font-size: 18px; /* حجم الخط */
+    font-weight: bold; /* خط عريض */
+    text-decoration: none; /* إزالة الخط تحت النص */
+    display: inline-block; /* تجنب التمدد الكامل */
+    max-width: 340px; /* تحديد عرض الزر على الشاشات الكبيرة */
+    width: 100%; /* جعله يستجيب للجوال */
+    text-align: center;
+    border: 2px solid #D4AF37; /* إطار واضح */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    transition: all 0.3s ease-in-out; /* تأثير ناعم عند التفاعل */
+    cursor: pointer; /* تغيير المؤشر لإظهار أنه زر */
+}
+
+/* تأثير النبض */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.btn-pulse {
+    animation: pulse 1.5s infinite; /* تشغيل التأثير بشكل مستمر */
+}
+
+/* تأثير عند التحويم */
+.custom-btn:hover {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* تأثير عند الضغط */
+.custom-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* ======================== Footer Section ======================== */
+.footer {
+    background-color:  rgb(5, 61, 97);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    direction: rtl;
+}
+
+.footer img {
+    width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: block;
+    margin-left: -20px;
+}
+
+.footer img:hover {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .footer img {
+        width: 100px;
+        margin-left: -15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer img {
+        width: 90px;
+        margin-left: -10px;
+    }
+}
+
+.footer .info img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 992px) {
+    .footer .info img {
+        margin-left: -1000px;
+    }
+}
+
+.footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #D4AF37; /* اللون الذهبي */
+    text-align: center;
+}
+
+.footer p,
+.footer a {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer p:hover,
+.footer a:hover {
+    color: #D4AF37; /* اللون الذهبي */
+}
+
+.footer .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-right: 0;
+}
+
+@media (max-width: 768px) {
+    .footer .social-icons {
+        gap: 10px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer .social-icons {
+        gap: 8px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.1rem;
+        padding: 6px;
+    }
+}
+
+.footer .social-icons a {
+    color: #fff;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-icons a:hover {
+    color: #D4AF37; /* اللون الذهبي */
+    transform: scale(1.1);
+    background-color: rgba(212, 175, 55, 0.2); /* خلفية ذهبية شفافة */
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.7); /* ظل ذهبي */
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer .col {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer .info img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer h5 {
+        font-size: 1.3rem;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer h5 {
+        font-size: 1.2rem;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 0.8rem;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.1rem;
+    }
+}
+
+/* ======================== Breaking News Section ======================== */
+.breaking-news {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #141414; /* اللون الذهبي */
+    border: 2px solid #D4AF37; /* اللون الذهبي */
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    background: #002B5C; /* اللون الأزرق الداكن */
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B); font-weight: bold;
+}
+.custom-gradient {
+    background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);
+    color: #002B5C; 
+    font-weight: bold;
+    padding: 20px; 
+    border-radius: 10px; /* إضافة زوايا مستديرة */
+    text-align: center; /* توسيط النص */
+}
+
+
+.contact .btn {
+    background: linear-gradient(135deg, #D4AF37, #FFD700, #B8860B);
+    color: #002B5C; 
+    font-weight: bold;
+    text-align: center; /* توسيط النص */
+    
+}
+.contact .btn :hover {
+    color: #D4AF37; /* اللون الذهبي */
+    transform: scale(1.1);
+    background-color: rgba(212, 175, 55, 0.2); /* خلفية ذهبية شفافة */
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.7); /* ظل ذهبي */
+}
+
 /*card sethion*/
 :root {
     --it-primary-color: #1E3A8A;

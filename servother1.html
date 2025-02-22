@@ -18,54 +18,55 @@
 <body>
     <!-- Navbar -->
     <section>
-        <!-- ناف بار مع التنسيق المطلوب -->
-        <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
-            <div class="container d-flex justify-content-between align-items-center">
-
-                <!-- شعار الشركة في الجهة اليمنى -->
-                <a class="navbar-brand" href="#">
-                    <img src="img/1.PNG" alt="شعار الشركة" class="logo">
-                </a>
-
-                <!-- القائمة للكمبيوتر -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-                    </ul>
-                </div>
-
-                <!-- زر القائمة للهاتف -->
-                <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#mainNavbar">
-                    <i class="fa-solid fa-bars fs-2"></i>
-                </button>
-            </div>
-        </nav>
-
-        <!-- القائمة الجانبية للهاتف -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainNavbar">
-            <div class="offcanvas-header">
-                <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body text-end">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-                </ul>
-            </div>
-            <div class="offcanvas-footer text-center mt-auto pb-3">
-                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-facebook-f fs-4"></i></a>
-                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-linkedin-in fs-4"></i></a>
-                <a href="#" class="social-icon mx-2"><i class="fa-brands fa-instagram fs-4"></i></a>
-            </div>
+      <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+        <div class="container d-flex justify-content-between align-items-center">
+          <a class="navbar-brand" href="#">
+            <img src="img/1.PNG" alt="شعار الشركة - وصف للشعار" class="logo" loading="lazy">
+          </a>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link fw-bold" href="index.html">الرئيسية</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold" href="about.html">من نحن</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold" href="services.html">الخدمات</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold" href="Products.html">المنتجات</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">تواصل معنا</a></li>
+            </ul>
+          </div>
+          <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavbar" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-1"></i>
+          </button>
         </div>
+      </nav>
+    
+      <!-- القائمة الجانبية للهاتف -->
+      <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mainNavbar">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body text-end">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+            <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+          </ul>
+        </div>
+        <div class="offcanvas-footer text-center pb-3" style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); width: 100%;">
+          <div class="d-flex justify-content-center align-items-center gap-4">
+              <a href="#" class="social-icon text-dark">
+                  <i class="fa-brands fa-instagram fs-3"></i>
+              </a>
+              <a href="#" class="social-icon text-dark">
+                  <i class="fa-brands fa-linkedin-in fs-3"></i>
+              </a>
+              <a href="#" class="social-icon text-dark">
+                  <i class="fa-brands fa-facebook-f fs-3"></i>
+              </a>
+          </div>
+      </div>
+      
+      </div>
     </section>
 
 
