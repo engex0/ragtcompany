@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/rajt.css">
   <script src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" href="imG/3.PNG">
 </head>
 <script src="script.js"></script>
@@ -17,62 +19,65 @@
 <body>
   <!-- القائمة العلوية -->
   <section>
-  <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand" href="#">
-        <img src="img/1.PNG" alt="شعار الشركة - وصف للشعار" class="logo" loading="lazy">
-      </a>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">
+          <img src="img/1.PNG" alt="شعار الشركة - وصف للشعار" class="logo" loading="lazy">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link fw-bold" href="index.html">الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="about.html">من نحن</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="services.html">الخدمات</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="Products.html">المنتجات</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">تواصل معنا</a></li>
+          </ul>
+        </div>
+        <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mainNavbar" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-1"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- القائمة الجانبية للهاتف -->
+    <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mainNavbar">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body text-end">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link fw-bold" href="index.html">الرئيسية</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="about.html">من نحن</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="services.html">الخدمات</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="Products.html">المنتجات</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">تواصل معنا</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+          <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
         </ul>
       </div>
-      <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavbar" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars fs-1"></i>
-      </button>
-    </div>
-  </nav>
-
-  <!-- القائمة الجانبية للهاتف -->
-  <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mainNavbar">
-    <div class="offcanvas-header">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body text-end">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
-        <li class="nav-item"><a class="nav-link" href="Products.html">المنتجات</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
-      </ul>
-    </div>
-    <div class="offcanvas-footer text-center pb-3" style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); width: 100%;">
-      <div class="d-flex justify-content-center align-items-center gap-4">
+      <div class="offcanvas-footer text-center pb-3"
+        style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); width: 100%;">
+        <div class="d-flex justify-content-center align-items-center gap-4">
           <a href="#" class="social-icon text-dark">
-              <i class="fa-brands fa-instagram fs-3"></i>
+            <i class="fa-brands fa-instagram fs-3"></i>
           </a>
           <a href="#" class="social-icon text-dark">
-              <i class="fa-brands fa-linkedin-in fs-3"></i>
+            <i class="fa-brands fa-linkedin-in fs-3"></i>
           </a>
           <a href="#" class="social-icon text-dark">
-              <i class="fa-brands fa-facebook-f fs-3"></i>
+            <i class="fa-brands fa-facebook-f fs-3"></i>
           </a>
+        </div>
       </div>
-  </div>
-  
-  </div>
-</section>
+
+    </div>
+  </section>
 
   <!-- الكاروسيل -->
   <section>
-    <div id="carouselExampleInterval" class="carousel slide position-relative" style="height: 70vh;" data-bs-ride="carousel">
+    <div id="carouselExampleInterval" class="carousel slide position-relative" style="height: 70vh;"
+      data-bs-ride="carousel">
       <div class="carousel-inner h-100">
-  
+
         <!-- الصورة الأولى -->
         <div class="carousel-item active h-100" data-bs-interval="5000">
           <img src="img/tchno12.jpg" class="d-block w-100 h-100 object-fit-cover" alt="نموذج ثلاثي الأبعاد 1">
@@ -89,7 +94,7 @@
             <p>معنا... العالم بين يديك!</p>
           </div>
         </div>
-  
+
         <!-- الصورة الثانية -->
         <div class="carousel-item h-100" data-bs-interval="5000">
           <img src="img/98.jpg" class="d-block w-100 h-100 object-fit-cover" alt="نموذج ثلاثي الأبعاد 2">
@@ -98,7 +103,7 @@
             <p>جودة.. بلا حدود!</p>
           </div>
         </div>
-  
+
         <!-- الصورة الثالثة -->
         <div class="carousel-item h-100" data-bs-interval="5000">
           <img src="img/999.JPG" class="d-block w-100 h-100 object-fit-cover" alt="نموذج ثلاثي الأبعاد 2">
@@ -107,9 +112,9 @@
             <p>معنا... العالم بين يديك!</p>
           </div>
         </div>
-  
+
       </div>
-  
+
       <!-- الأزرار داخل الصورة -->
       <div class="position-absolute w-100 d-flex justify-content-center" style="bottom: 10%; left: 0;">
         <a href="file/profile.pdf" download class="btn btn-lg mx-2 rounded-pill px-4 py-2"
@@ -121,58 +126,60 @@
           اتصل بنا
         </a>
       </div>
-  
+
       <!-- أزرار التحكم -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">سابق</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">التالي</span>
       </button>
     </div>
   </section>
-  
+
 
   <!-- من نحن -->
   <div class="aboutus py-5">
     <div class="container">
-        <div class="row align-items-center flex-lg-row-reverse"> 
-            <div class="col-lg-5 position-relative text-center">
-                <div class="image-container">
-                    <img src="img/5.JPG" alt="شعار الشركة" class="img-fluid high-quality rounded shadow-lg">
-                    <!-- شارة 20 عامًا -->
+      <div class="row align-items-center flex-lg-row-reverse">
+        <div class="col-lg-5 position-relative text-center">
+          <div class="image-container">
+            <img src="img/5.JPG" alt="شعار الشركة" class="img-fluid high-quality rounded shadow-lg">
+            <!-- شارة 20 عامًا -->
 
-                </div>
-            </div>
-
-            <div class="col-lg-6 text-lg-start text-center">
-                <h2 class="fw-bold mt-3 display-5 ">
-                    تقدم مؤسسة <span class="text-lg-start">رياض الحروي للتجارة والإستيراد
-
-                    </span>  العديد من الحلول التجارية والتقنية في مختلف المجالات. 
-                </h2>
-                <p class=" text-dark-blue mt-4 fw-bold">
-                  في <strong>مؤسسة رياض الحروي للتجارة والاستيراد</strong>
-                  ، نوفر حلولًا تجارية متكاملة تلبي
-                   احتياجات الأسواق المحلية والعالمية،
-                   مع التركيز على الجودة والأسعار التنافسية. نعمل على بناء
-                   شراكات طويلة الأمد قائمة على الثقة والالتزام.
-              </p>
-              <p class=" text-dark-blue fw-bold">
-                  نسعى لمواكبة تطورات السوق وتقديم خدمات تلبي تطلعات عملائنا، لأن نجاحهم هو جزء من نجاحنا.
-              </p>
-              
-                <div class="btn-container">
-                  <a href="about.html" class="btn btn-gold px-4 py-2 fs-5 mt-4">اكتشف المزيد عنا</a>
-              </div>
-              
-              
-            </div>
+          </div>
         </div>
+
+        <div class="col-lg-6 text-lg-start " dir="rtl">
+          <h2 class="fw-bold mt-3 display-5 ">
+            تقدم مؤسسة <span class="text-lg-start">رياض الحروي للتجارة والإستيراد
+
+            </span> العديد من الحلول التجارية والتقنية في مختلف المجالات.
+          </h2>
+          <p class=" fw-bold" style="text-align: right;">
+            في <strong>مؤسسة رياض الحروي للتجارة والاستيراد</strong>
+            ، نوفر حلولًا تجارية متكاملة تلبي
+            احتياجات الأسواق المحلية والعالمية،
+            مع التركيز على الجودة والأسعار التنافسية. نعمل على بناء
+            شراكات طويلة الأمد قائمة على الثقة والالتزام.
+          </p>
+          <p class=" fw-bold" style="text-align: right;">
+            نسعى لمواكبة تطورات السوق وتقديم خدمات تلبي تطلعات عملائنا، لأن نجاحهم هو جزء من نجاحنا.
+          </p>
+
+          <div class="btn-container">
+            <a href="about.html" class="btn btn-gold px-4 py-2 fs-5 mt-4">اكتشف المزيد عنا</a>
+          </div>
+
+
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
 
 
@@ -189,69 +196,69 @@
         <p class=" text-center fw-bold text-blue fs-4">لماذا نحنُ خيارك الأفضل؟</p>
         <div class="gold-line"></div>
       </div>
-        <!-- الكارد الأول: الابتكار -->
-        <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card-container">
-                <div class="card text-center">
-                    <div class="card-front d-flex flex-column align-items-center justify-content-center">
-                        <i class="fas fa-lightbulb fa-3x mb-3"></i>
-                        <h5>الابتكار</h5>
-                    </div>
-                    <div class="card-back d-flex align-items-center justify-content-center">
-                        <p>نلتزم بتقديم أفكار مبتكرة لتحسين خدماتنا بشكل مستمر ومواكبة تطورات السوق.</p>
-                    </div>
-                </div>
+      <!-- الكارد الأول: الابتكار -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card-container">
+          <div class="card text-center">
+            <div class="card-front d-flex flex-column align-items-center justify-content-center">
+              <i class="fas fa-lightbulb fa-3x mb-3"></i>
+              <h5>الابتكار</h5>
             </div>
+            <div class="card-back d-flex align-items-center justify-content-center">
+              <p>نلتزم بتقديم أفكار مبتكرة لتحسين خدماتنا بشكل مستمر ومواكبة تطورات السوق.</p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- الكارد الثاني: الجودة -->
-        <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card-container">
-                <div class="card text-center">
-                    <div class="card-front d-flex flex-column align-items-center justify-content-center">
-                        <i class="fas fa-star fa-3x mb-3"></i>
-                        <h5>الجودة</h5>
-                    </div>
-                    <div class="card-back d-flex align-items-center justify-content-center">
-                        <p>نحرص على تقديم خدمات و منتجات عالية الجودة تفوق توقعات عملائنا.</p>
-                    </div>
-                </div>
+      <!-- الكارد الثاني: الجودة -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card-container">
+          <div class="card text-center">
+            <div class="card-front d-flex flex-column align-items-center justify-content-center">
+              <i class="fas fa-star fa-3x mb-3"></i>
+              <h5>الجودة</h5>
             </div>
+            <div class="card-back d-flex align-items-center justify-content-center">
+              <p>نحرص على تقديم خدمات و منتجات عالية الجودة تفوق توقعات عملائنا.</p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- الكارد الثالث: الالتزام بالمواعيد -->
-        <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card-container">
-                <div class="card text-center">
-                    <div class="card-front d-flex flex-column align-items-center justify-content-center">
-                        <i class="fas fa-clock fa-3x mb-3"></i>
-                        <h5>الالتزام بالمواعيد</h5>
-                    </div>
-                    <div class="card-back d-flex align-items-center justify-content-center">
-                        <p>نلتزم بتسليم المشاريع و الخدمات في الوقت المحدد بكل دقة وكفاءة.</p>
-                    </div>
-                </div>
+      <!-- الكارد الثالث: الالتزام بالمواعيد -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card-container">
+          <div class="card text-center">
+            <div class="card-front d-flex flex-column align-items-center justify-content-center">
+              <i class="fas fa-clock fa-3x mb-3"></i>
+              <h5>الالتزام بالمواعيد</h5>
             </div>
+            <div class="card-back d-flex align-items-center justify-content-center">
+              <p>نلتزم بتسليم المشاريع و الخدمات في الوقت المحدد بكل دقة وكفاءة.</p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- الكارد الرابع: فريق عمل محترف -->
-        <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card-container">
-                <div class="card text-center">
-                    <div class="card-front d-flex flex-column align-items-center justify-content-center">
-                        <i class="fas fa-users fa-3x mb-3"></i>
-                        <h5>فريق عمل محترف</h5>
-                    </div>
-                    <div class="card-back d-flex align-items-center justify-content-center">
-                        <p>نمتلك فريق عمل محترف يتمتع بخبرة واسعة لضمان نجاح المشاريع و تحقيق رضا العملاء.</p>
-                    </div>
-                </div>
+      <!-- الكارد الرابع: فريق عمل محترف -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card-container">
+          <div class="card text-center">
+            <div class="card-front d-flex flex-column align-items-center justify-content-center">
+              <i class="fas fa-users fa-3x mb-3"></i>
+              <h5>فريق عمل محترف</h5>
             </div>
+            <div class="card-back d-flex align-items-center justify-content-center">
+              <p>نمتلك فريق عمل محترف يتمتع بخبرة واسعة لضمان نجاح المشاريع و تحقيق رضا العملاء.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- تحسينات CSS -->
+  <!-- تحسينات CSS -->
 
 
   <!-- شركاء النجاح -->
@@ -283,7 +290,8 @@
     <h2 class="mb-3">اشترك الآن</h2>
     <p class="mb-4">كن أول من يحصل على آخر الأخبار والعروض الخاصة مباشرة إلى بريدك الإلكتروني.</p>
     <form id="subscription-form" class="d-flex flex-column align-items-center">
-      <input type="email" class="form-control w-50 mb-3" id="email-input" placeholder="أدخل بريدك الإلكتروني" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="يرجى إدخال بريد إلكتروني صحيح مثل example@example.com">
+      <input type="email" class="form-control w-50 mb-3" id="email-input" placeholder="أدخل بريدك الإلكتروني" required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="يرجى إدخال بريد إلكتروني صحيح مثل example@example.com">
       <button type="submit" class="btn btn-gold px-4 py-2 fs-5 mt-4 d-block mx-auto w-25">اشترك</button>
     </form>
     <p id="feedback-message" class="mt-3" style="display: none;">شكرًا لاشتراكك! 🌟</p>
@@ -291,7 +299,7 @@
 
   <!-- الفوتر -->
   <div class="footer pt-5 pb-5 text-white-50 text-center text-md-end">
-  <div class="container">
+    <div class="container">
       <!-- إعلان العروض -->
       <div class="breaking-news text-center p-2 mb-4">
       </div>
@@ -322,32 +330,34 @@
           <div class="contact text-center">
             <h5 class="text-light mb-4">تواصل معنا</h5>
             <p class="lh-lg mb-4">ابقَ على تواصل معنا عبر البريد الإلكتروني أو الهاتف. نحن بانتظار رسائلكم!</p>
-            <a class="btn btn-warning text-dark fw-bold w-100 rounded-pill mb-4" href="mailto:ragt@gmail.com">info@ragtco.com</a>
-            
+            <a class="btn btn-warning text-dark fw-bold w-100 rounded-pill mb-4"
+              href="mailto:ragt@gmail.com">info@ragtco.com</a>
+
             <!-- الأيقونات -->
             <ul class="d-flex list-unstyled gap-3 justify-content-center">
-                <li>
-                    <a class="text-dark text-decoration-none" href="#">
-                        <i class="fab fa-facebook fa-2x"></i> <!-- حجم الأيقونة: fa-2x -->
-                    </a>
-                </li>
-                <li>
-                    <a class="text-dark text-decoration-none" href="#">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="text-dark text-decoration-none" href="https://www.linkedin.com/company/ragtco/posts/?feedView=all">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="text-dark text-decoration-none" href="#">
-                        <i class="fab fa-youtube fa-2x"></i>
-                    </a>
-                </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#">
+                  <i class="fab fa-facebook fa-2x"></i> <!-- حجم الأيقونة: fa-2x -->
+                </a>
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#">
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none"
+                  href="https://www.linkedin.com/company/ragtco/posts/?feedView=all">
+                  <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#">
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </li>
             </ul>
-        </div>
+          </div>
         </div>
       </div>
     </div>
@@ -371,7 +381,7 @@
         }
       });
 
-   
+
 
       // تحسين قسم "من نحن"
       const aboutSection = document.querySelector(".aboutus");

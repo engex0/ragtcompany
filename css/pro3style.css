@@ -508,6 +508,28 @@ h5 {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+.btn-custom:hover {
+    background-color: #128C7E !important;
+    /* لون واتساب الرسمي */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+}
+
 /* تطبيق تأثير النبض */
 .btn-custom {
     animation: pulse 1.5s infinite;
@@ -518,53 +540,6 @@ h5 {
     transform: scale(1.1);
     box-shadow: 0 0 25px rgba(0, 255, 0, 1);
     transition: all 0.3s ease-in-out;
-}
-/*نهاية قسم المتجات */
-.btn-back {
-    border-radius: 8px; /* زوايا ناعمة */
-    font-weight: bold; /* جعل النص أكثر وضوحًا */
-    transition: all 0.3s ease-in-out; /* تأثير سلس */
-}
-
-.btn-back:hover {
-    background-color: #333; /* لون أغمق عند التمرير */
-    transform: translateX(-5px); /* تحريك الزر قليلاً لليسار */
-    color: #fff;
-}
-
-.btn-back i {
-    transition: transform 0.3s ease-in-out;
-}
-
-.btn-back:hover i {
-    transform: translateX(5px); /* تحريك الأيقونة باتجاه النص عند التمرير */
-}
-@media (max-width: 768px) {
-    /* إصلاح التأثيرات الضبابية */
-    .custom-card {
-        backdrop-filter: none;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-        transform: none;
-    }
-
-    /* إصلاح الخلفيات الثابتة */
-    body {
-        background-attachment: scroll;
-    }
-
-    /* إصلاح حجم الخطوط */
-    body {
-        font-size: 16px;
-    }
-    h1, h2, h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-
-    /* إصلاح الصور */
-    img {
-        filter: none;
-    }
 }
 /*نهاية قسم المتجات */
 
