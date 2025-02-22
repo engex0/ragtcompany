@@ -142,69 +142,7 @@
     </div>
   </section>
 
-  <SCript>
-    document.addEventListener("DOMContentLoaded", function () {
-      // تأثير تحميل الصفحة تدريجيًا
-      document.body.style.opacity = "0";
-      document.body.style.transition = "opacity 0.8s ease-in-out";
-      setTimeout(() => (document.body.style.opacity = "1"), 100);
-
-      // تحديد جميع عناصر المنتجات
-      const productCards = document.querySelectorAll(".product-card");
-
-      // تأثير ظهور المنتجات عند التمرير
-      const revealOnScroll = () => {
-        productCards.forEach((card, index) => {
-          const cardTop = card.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-
-          if (cardTop < windowHeight - 50) {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0) scale(1)";
-            card.style.transition = `opacity 0.5s ease-out ${index * 0.1}s, transform 0.5s ease-out ${index * 0.1}s`;
-          }
-        });
-      };
-
-      window.addEventListener("scroll", revealOnScroll);
-      revealOnScroll(); // تشغيل التأثير عند التحميل
-
-      // تأثير تحريك الصور عند التحويم
-      const images = document.querySelectorAll(".product-card img");
-
-      images.forEach((img) => {
-        img.addEventListener("mouseenter", () => {
-          img.style.transform = "scale(1.08)";
-          img.style.transition = "transform 0.3s ease-in-out";
-        });
-
-        img.addEventListener("mouseleave", () => {
-          img.style.transform = "scale(1)";
-        });
-      });
-
-      // تأثير تفاعل الأزرار عند المرور عليها
-      const buttons = document.querySelectorAll(".product-overlay a");
-
-      buttons.forEach((button) => {
-        button.addEventListener("mouseenter", () => {
-          button.style.transform = "scale(1.1)";
-          button.style.background = "var(--white)";
-          button.style.color = "var(--dark-blue)";
-          button.style.transition = "all 0.3s ease-in-out";
-        });
-
-        button.addEventListener("mouseleave", () => {
-          button.style.transform = "scale(1)";
-          button.style.background = "var(--gold)";
-          button.style.color = "var(--dark-blue)";
-        });
-      });
-    });
-
-  </SCript>
-
-
+  
 
 
 
