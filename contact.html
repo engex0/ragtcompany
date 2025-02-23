@@ -125,33 +125,32 @@
 
                 <!--  نموذج التواصل -->
                 <div class="contact col-lg-8">
-                    <form id="contact-form" class="contact-form bg-white p-4 shadow-lg rounded-3 needs-validation"
-                        action="send_email.php" method="post" novalidate>
+                    <form id="contact-form" class="contact-form bg-white p-4 shadow-lg rounded-3 needs-validation" action="send_email.php" method="post" novalidate>
                         <h3 class="text-dark-blue mb-4">تواصل معنا</h3>
-                        <p class="text-muted">دعنا نكون شركاء نجاحك. إذا كان لديك استفسارات أو تحتاج إلى مزيد من
-                            المعلومات، اكتب لنا الآن وسنقوم بالرد في أقرب وقت ممكن!</p>
-
+                        <p class="text-muted">دعنا نكون شركاء نجاحك. إذا كان لديك استفسارات أو تحتاج إلى مزيد من المعلومات، اكتب لنا الآن وسنقوم بالرد في أقرب وقت ممكن!</p>
+                
+                        <!-- حقل الاسم -->
                         <div class="mb-3">
                             <label for="name" class="form-label">الاسم</label>
-                            <input type="text" class="form-control" id="name" name="name"
-                                placeholder="يرجى كتابة الاسم هنا" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="يرجى كتابة الاسم هنا" required>
                             <div class="invalid-feedback">يرجى إدخال الاسم.</div>
                         </div>
-
+                
+                        <!-- حقل البريد الإلكتروني -->
                         <div class="mb-3">
                             <label for="email" class="form-label">البريد الإلكتروني</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="يرجى كتابة البريد الإلكتروني هنا" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="يرجى كتابة البريد الإلكتروني هنا" required>
                             <div class="invalid-feedback">يرجى إدخال بريد إلكتروني صالح.</div>
                         </div>
-
+                
+                        <!-- حقل رقم الهاتف -->
                         <div class="mb-3">
                             <label for="phone" class="form-label">رقم الهاتف</label>
-                            <input type="tel" class="form-control" id="phone" name="phone"
-                                placeholder="يرجى كتابة رقم الهاتف هنا" required>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="يرجى كتابة رقم الهاتف هنا" required>
                             <div class="invalid-feedback">يرجى إدخال رقم هاتف صحيح.</div>
                         </div>
-
+                
+                        <!-- حقل اختيار الخدمة -->
                         <div class="mb-3">
                             <label for="service" class="form-label">اختر الخدمة</label>
                             <select id="service" name="service" class="form-select" required>
@@ -162,24 +161,37 @@
                             </select>
                             <div class="invalid-feedback">يرجى اختيار خدمة.</div>
                         </div>
-
+                
+                        <!-- حقل الرسالة -->
                         <div class="mb-3">
                             <label for="message" class="form-label">رسالتك</label>
-                            <textarea class="form-control" id="message" name="message" rows="4"
-                                placeholder="يرجى كتابة رسالتك هنا" required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="يرجى كتابة رسالتك هنا" required></textarea>
                             <div class="invalid-feedback">يرجى كتابة رسالتك.</div>
                         </div>
-
+                
+                        <!-- زر الإرسال -->
                         <button type="submit" id="submit-btn" class="btn btn-primary btn-lg w-100">إرسال</button>
+                
+                        <!-- رسائل التنبيه -->
                         <div id="alert-box" class="alert text-center mt-3" style="display: none;"></div>
-                        <p id="success-message" class="text-success mt-3" style="display: none;">تم إرسال رسالتك بنجاح!
-                        </p>
+                        <p id="success-message" class="text-success mt-3" style="display: none;">تم إرسال رسالتك بنجاح!</p>
                     </form>
-
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        // التحقق من النموذج عند الإرسال
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    if (!this.checkValidity()) {
+        event.preventDefault(); // منع الإرسال إذا كان النموذج غير صالح
+        event.stopPropagation();
+    }
+
+    // إضافة فئة 'was-validated' لإظهار رسائل الخطأ
+    this.classList.add('was-validated');
+});
+    </script>
     <script>
    document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
